@@ -6,7 +6,7 @@ import javax.microedition.lcdui.game.GameCanvas;
 
 public abstract class State extends GameCanvas {
   public State() {
-    super(true);
+    super(false);
     setFullScreenMode(true);
   }
 
@@ -21,8 +21,8 @@ public abstract class State extends GameCanvas {
   public abstract void draw(Graphics g);
 
   public static void setGameMidlet(GameMidlet midlet) {
-    gameMidlet = midlet;
+    game = midlet;
   }
 
-  protected static GameMidlet gameMidlet;
+  protected static GameMidlet game;
 }

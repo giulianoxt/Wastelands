@@ -20,11 +20,11 @@ public class SplashScreen extends State {
   public void dispose() {
   }
 
-  public void update(long delta) {
+  public void update(long delta) { 
     timeElapsed += delta;
 
     if (timeElapsed >= DisplayProperties.SPLASH_DURATION) {
-      gameMidlet.quit();
+      game.changeState(new MainMenu());
     }
   }
 
