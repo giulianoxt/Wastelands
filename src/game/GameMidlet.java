@@ -1,23 +1,29 @@
 package game;
 
-import states.State;
+import states.base.State;
 import javax.microedition.lcdui.*;
 import javax.microedition.midlet.*;
-import states.SplashScreen;
+import states.ui.SplashScreen;
 
 public class GameMidlet extends MIDlet implements Runnable {
   private State state;
   private boolean paused;
+  private static GameMidlet instance;
 
   public GameMidlet() {
     state = null;
+    instance = this;
     State.setGameMidlet(this);
+  }
+
+  public static GameMidlet getInstance() {
+    return instance;
   }
 
   public void startApp() {
     paused = false;
 
-    changeState(new SplashScreen("/splash_wastelands.png"));
+    gotoState(new SplashScreen("/splash_wastelands.png"));
 
     new Thread(this).start();
   }
@@ -34,7 +40,7 @@ public class GameMidlet extends MIDlet implements Runnable {
   public void destroyApp(boolean unconditional) {
   }
 
-  public void changeState(State newState) {
+  public void gotoState(State newState) {
     if (state != null)
       state.dispose();
 
@@ -44,11 +50,19 @@ public class GameMidlet extends MIDlet implements Runnable {
     Display.getDisplay(this).setCurrent(state);
   }
 
+  public void gotoDisplayable(Displayable display) {
+    state = null;
+    Display.getDisplay(this).setCurrent(display);
+  }
+
   public void run() {
     long last_time = getTime();
     long tick_time = 1000 / properties.DisplayProperties.FPS;
 
     while (true) {
+      if (state == null)
+        continue;
+      
       long t1 = getTime();
       long dt = t1 - last_time;
 

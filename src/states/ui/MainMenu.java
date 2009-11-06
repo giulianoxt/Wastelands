@@ -1,5 +1,7 @@
-package states;
+package states.ui;
 
+import states.base.*;
+import states.ui.ChapterSelection;
 import game.GameDesign;
 import java.io.IOException;
 import javax.microedition.lcdui.Graphics;
@@ -13,7 +15,7 @@ public class MainMenu extends State {
   private Sprite[] menuItems;
   private int selectedItem;
 
-  public void init() {
+  public MainMenu() {
     try {
       gameDesign = new GameDesign();
       layerManager = new LayerManager();
@@ -68,9 +70,16 @@ public class MainMenu extends State {
   private void selectedAction() {
     switch (selectedItem) {
       case 0:
+        game.gotoDisplayable(new ChapterSelection());
+        break;
+
       case 1:
       case 2:
       case 3:
+        MessageBox msg = new MessageBox(
+          "Wastelands", "Not available yet.", this
+        );
+        game.gotoDisplayable(msg);
         break;
 
       case 4:
