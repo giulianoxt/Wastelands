@@ -43,16 +43,6 @@ public class MainMenu extends State {
     menuItems[menuItem].setFrame(1);
   }
 
-  public void dispose() {
-  }
-
-  public void update(long dt) {
-  }
-
-  public void draw(Graphics g) {
-    layerManager.paint(g, 0, 0);
-  }
-
   protected void keyPressed(int keyCode) {
     int next = selectedItem;
 
@@ -86,5 +76,9 @@ public class MainMenu extends State {
       case 4:
         game.quit();
     }
+  }
+
+  public void draw(Graphics g) {
+    layerManager.paint(g, 0, 0);
   }
 }

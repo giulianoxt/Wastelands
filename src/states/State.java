@@ -15,10 +15,10 @@ public abstract class State extends GameCanvas {
     flushGraphics();
   }
 
-  public abstract void init();
-  public abstract void dispose();
-  public abstract void update(long dt);
-  public abstract void draw(Graphics g);
+  public void init() { }
+  public void dispose() { }
+  public void update(long dt) { }
+  public void draw(Graphics g) { }
 
   public static void setGameMidlet(GameMidlet midlet) {
     game = midlet;

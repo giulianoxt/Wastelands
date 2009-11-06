@@ -17,9 +17,6 @@ public class SplashScreen extends State {
     timeElapsed = 0;
   }
 
-  public void dispose() {
-  }
-
   public void update(long delta) { 
     timeElapsed += delta;
 
