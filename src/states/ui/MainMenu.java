@@ -1,8 +1,7 @@
 package states.ui;
 
-import states.base.*;
-import states.ui.ChapterSelection;
 import game.GameDesign;
+import states.base.State;
 import java.io.IOException;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.game.LayerManager;
@@ -76,14 +75,14 @@ public class MainMenu extends State {
       case 1:
       case 2:
       case 3:
-        MessageBox msg = new MessageBox(
+        game.gotoDisplayable(new MessageBox(
           "Wastelands", "Not available yet.", this
-        );
-        game.gotoDisplayable(msg);
+        ));
         break;
 
       case 4:
         game.quit();
+        break;
     }
   }
 
