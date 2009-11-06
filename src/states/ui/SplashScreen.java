@@ -1,10 +1,9 @@
 package states.ui;
 
 import states.base.*;
-import states.ui.MainMenu;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.Image;
-import properties.DisplayProperties;
+import properties.Constants;
 import util.Util;
 
 public class SplashScreen extends State {
@@ -22,7 +21,8 @@ public class SplashScreen extends State {
   public void update(long delta) { 
     timeElapsed += delta;
 
-    if (timeElapsed >= DisplayProperties.SPLASH_DURATION) {
+    if (timeElapsed >= Constants.SPLASH_DURATION ||
+        getKeyStates() != 0) {
       game.gotoState(new MainMenu());
     }
   }

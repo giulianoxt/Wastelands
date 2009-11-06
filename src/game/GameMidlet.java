@@ -57,7 +57,7 @@ public class GameMidlet extends MIDlet implements Runnable {
 
   public void run() {
     long last_time = getTime();
-    long tick_time = 1000 / properties.DisplayProperties.FPS;
+    long tick_time = 1000 / properties.Constants.FPS;
 
     while (true) {
       if (state == null)
