@@ -1,11 +1,11 @@
-package states.ui;
+package game.states.ui;
 
 import game.GameMidlet;
 import javax.microedition.lcdui.Alert;
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Displayable;
-import states.base.State;
+import game.base.State;
 
 public class MessageBox extends Alert implements CommandListener {
   public MessageBox(String title, String content, State next) {

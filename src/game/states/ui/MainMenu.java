@@ -1,7 +1,7 @@
-package states.ui;
+package game.states.ui;
 
 import game.GameDesign;
-import states.base.State;
+import game.base.State;
 import java.io.IOException;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.game.LayerManager;
@@ -14,7 +14,18 @@ public class MainMenu extends State {
   private Sprite[] menuItems;
   private int selectedItem;
 
-  public MainMenu() {
+  private static MainMenu instance = null;
+
+  public static MainMenu getInstance() {
+    if (instance == null)
+      instance = new MainMenu();
+    
+    return instance;
+  }
+
+  private MainMenu() {
+    instance = this;
+
     try {
       gameDesign = new GameDesign();
       layerManager = new LayerManager();
@@ -69,7 +80,7 @@ public class MainMenu extends State {
   private void selectedAction() {
     switch (selectedItem) {
       case 0:
-        game.gotoDisplayable(new ChapterSelection());
+        game.gotoDisplayable(ChapterSelection.getInstance());
         break;
 
       case 1:

@@ -1,4 +1,4 @@
-package states.base;
+package game.base;
 
 import game.GameMidlet;
 import javax.microedition.lcdui.Graphics;

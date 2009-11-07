@@ -1,9 +1,9 @@
 package game;
 
-import states.base.State;
+import game.base.State;
 import javax.microedition.lcdui.*;
 import javax.microedition.midlet.*;
-import states.ui.SplashScreen;
+import game.states.ui.SplashScreen;
 
 public class GameMidlet extends MIDlet implements Runnable {
   private State state;

@@ -1,6 +1,6 @@
-package states.ui;
+package game.states.ui;
 
-import states.base.*;
+import game.base.*;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.Image;
 import properties.Constants;
@@ -23,7 +23,7 @@ public class SplashScreen extends State {
 
     if (timeElapsed >= Constants.SPLASH_DURATION ||
         getKeyStates() != 0) {
-      game.gotoState(new MainMenu());
+      game.gotoState(MainMenu.getInstance());
     }
   }
 
