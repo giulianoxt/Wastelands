@@ -5,12 +5,17 @@ import game.base.State;
 import game.sprites.MainSprite;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.game.LayerManager;
+import javax.microedition.lcdui.game.Sprite;
 import javax.microedition.lcdui.game.TiledLayer;
+import properties.Constants;
+import util.Util;
 
 public abstract class Chapter extends State {
   public Chapter(String id, String name) {
     chapterId = id;
     chapterName = name;
+
+    hpSprite = new Sprite(Util.getImage("/sprites/bolt.png"));
   }
 
   public String getId() {
@@ -47,8 +52,11 @@ public abstract class Chapter extends State {
 
   protected void setupLayerManager() {
     layerManager = new LayerManager();
-    layerManager.setViewWindow(0, 0, 240, 310);
+    layerManager.setViewWindow(
+      0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT
+    );
 
+    layerManager.append(hpSprite);
     layerManager.append(mainSprite);
     layerManager.append(wallLayer);
 
@@ -66,7 +74,8 @@ public abstract class Chapter extends State {
   }
 
   protected void updateViewWindow() {
-    int view_w = 240, view_h = 310;
+    int view_w = Constants.SCREEN_WIDTH;
+    int view_h = Constants.SCREEN_HEIGHT;
     int view_w2 = view_w / 2, view_h2 = view_h / 2;
 
     int main_x = mainSprite.getX(), main_y = mainSprite.getY();
@@ -97,6 +106,10 @@ public abstract class Chapter extends State {
     int viewc_ty = viewc_y - view_h2;
 
     layerManager.setViewWindow(viewc_tx, viewc_ty, view_w, view_h);
+    hpSprite.setPosition(
+      viewc_tx + Constants.HEART_X,
+      viewc_ty + Constants.HEART_Y
+    );
   }
 
   protected Point fromLayerToScene(Point p) {
@@ -110,6 +123,14 @@ public abstract class Chapter extends State {
     g.setColor(0, 0, 0);
     g.fillRect(0, 0, wallLayer.getWidth(), wallLayer.getHeight());
     layerManager.paint(g, 0, 0);
+
+    g.setColor(255, 255, 255);
+    g.drawString(
+      new Integer(mainSprite.getHP()).toString(),
+      hpSprite.getWidth() + 3,
+      hpSprite.getHeight() / 2 - 3,
+      Graphics.TOP | Graphics.LEFT
+    );
   }
 
   protected String chapterId, chapterName;
@@ -119,4 +140,6 @@ public abstract class Chapter extends State {
 
   protected MainSprite mainSprite;
   protected LayerManager layerManager;
+
+  protected Sprite hpSprite;
 }

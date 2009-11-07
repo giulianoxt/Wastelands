@@ -34,6 +34,14 @@ public class MainSprite extends Sprite {
     setFrameSequence(seq);
   }
 
+  public int getHP() {
+    return hp;
+  }
+
+  public void setHP(int _hp) {
+    hp = _hp;
+  }
+
   public void update(long dt, int keyState) {
     double dx = 0, dy = 0, d = dt * Constants.CHAR_VELOCITY;
 
@@ -67,7 +75,7 @@ public class MainSprite extends Sprite {
   }
 
 
-  private int life;
+  private int hp;
 
   private int[] current;
   private long frameElapsed;
