@@ -17,6 +17,9 @@ public class GameDesign {
 
   //<editor-fold defaultstate="collapsed" desc=" Generated Fields ">//GEN-BEGIN:|fields|0|
   private Image menu_background;
+  private Sprite MenuBackground;
+  public int MenuBackgroundseq001Delay = 200;
+  public int[] MenuBackgroundseq001 = {0, 0, 0, 0, 0};
   private Image menu_about;
   private Sprite MenuItemAbout;
   public int MenuItemAboutAnimDelay = 200;
@@ -71,9 +74,16 @@ public class GameDesign {
   public int GuardPunkWalkDownDelay = 160;
   public int[] GuardPunkWalkDown = {0, 1, 2};
   private Image guard_punk;
-  private Sprite MenuBackground;
-  public int MenuBackgroundseq001Delay = 200;
-  public int[] MenuBackgroundseq001 = {0, 0, 0, 0, 0};
+  private Image guard_yellow;
+  private Sprite GuardYellow;
+  public int GuardYellowWalkDownDelay = 200;
+  public int[] GuardYellowWalkDown = {0, 1, 2};
+  public int GuardYellowWalkLeftDelay = 200;
+  public int[] GuardYellowWalkLeft = {3, 4, 5};
+  public int GuardYelloWalkRightDelay = 200;
+  public int[] GuardYelloWalkRight = {6, 7, 8};
+  public int GuardYellowWalkUpDelay = 200;
+  public int[] GuardYellowWalkUp = {9, 10, 11};
   //</editor-fold>//GEN-END:|fields|0|
 
   //<editor-fold defaultstate="collapsed" desc=" Generated Methods ">//GEN-BEGIN:|methods|0|
@@ -362,6 +372,27 @@ public class GameDesign {
     return MenuBackground;
   }
 //GEN-END:|140-getter|2|
+
+  public Image getGuard_yellow() throws java.io.IOException {//GEN-BEGIN:|178-getter|0|178-preInit
+    if (guard_yellow == null) {//GEN-END:|178-getter|0|178-preInit
+      // write pre-init user code here
+      guard_yellow = Image.createImage("/sprites/guard_yellow.png");//GEN-BEGIN:|178-getter|1|178-postInit
+    }//GEN-END:|178-getter|1|178-postInit
+    // write post-init user code here
+    return this.guard_yellow;//GEN-BEGIN:|178-getter|2|
+  }
+//GEN-END:|178-getter|2|
+
+  public Sprite getGuardYellow() throws java.io.IOException {//GEN-BEGIN:|179-getter|0|179-preInit
+    if (GuardYellow == null) {//GEN-END:|179-getter|0|179-preInit
+      // write pre-init user code here
+      GuardYellow = new Sprite(getGuard_yellow(), 32, 32);//GEN-BEGIN:|179-getter|1|179-postInit
+      GuardYellow.setFrameSequence(GuardYellowWalkDown);//GEN-END:|179-getter|1|179-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|179-getter|2|
+    return GuardYellow;
+  }
+//GEN-END:|179-getter|2|
 
 
 

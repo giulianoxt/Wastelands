@@ -51,7 +51,7 @@ public class MainSprite extends Sprite {
   }
 
   public void update(long dt, int keyState) {
-    double dx = 0, dy = 0, d = dt * Constants.CHAR_VELOCITY;
+    double dx = 0, dy = 0, d = dt * Constants.MAIN_VELOCITY;
 
     if ((keyState & GameCanvas.LEFT_PRESSED) != 0) {
       dx -= d;

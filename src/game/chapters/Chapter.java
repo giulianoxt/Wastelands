@@ -1,8 +1,15 @@
 package game.chapters;
 
+import game.GameDesign;
+import game.GameMidlet;
 import util.Point;
 import game.base.State;
+import game.sprites.EnemySprite;
 import game.sprites.MainSprite;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Vector;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.game.LayerManager;
 import javax.microedition.lcdui.game.Sprite;
@@ -51,7 +58,9 @@ public abstract class Chapter extends State {
     this.wallLayer = wallLayer;
   }
 
-  protected void setupLayerManager() {
+  protected void setupChapter() {
+    setupEnemies();
+
     layerManager = new LayerManager();
     layerManager.setViewWindow(
       0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT
@@ -60,9 +69,58 @@ public abstract class Chapter extends State {
     layerManager.append(hpSprite);
     layerManager.append(manaSprite);
     layerManager.append(mainSprite);
-    layerManager.append(wallLayer);
-
     mainSprite.setPosition(fromLayerToScene(getStartPoint()));
+
+    for (int i = 0; i < enemies.length; ++i) {
+      layerManager.append(enemies[i]);
+    }
+
+    layerManager.append(wallLayer);
+  }
+
+  protected void setupEnemies() {
+    Hashtable props = Util.readPropertyFile(chapterId);
+
+    setStartPoint(Util.readTuple((String)props.get("start_pos")));
+    setEndPoint(Util.readTuple((String)props.get("end_pos")));
+
+    props.remove("start_pos");
+    props.remove("end_pos");
+
+    Vector enemiesVec = new Vector(10);
+    EnemySprite enemy = null;
+    GameDesign design = GameMidlet.getDesignInstance();
+
+    for (Enumeration e = props.keys(); e.hasMoreElements(); ) {
+      String key = (String)e.nextElement();
+      Point pos = Util.readTuple((String)props.get(key));
+
+      if (!key.startsWith("#"))
+        continue;
+
+      key = key.substring(1);
+
+      try {
+        if (key.startsWith("GuardGreen")) {
+          enemy = new EnemySprite(design.getGuardGreen());
+        } else if (key.startsWith("GuardPunk")) {
+          enemy = new EnemySprite(design.getGuardPunk());
+        } else if (key.startsWith("GuardYellow")) {
+          enemy = new EnemySprite(design.getGuardYellow());
+        } else {
+          continue;
+        }
+
+        enemy.setPosition(fromLayerToScene(pos));
+      } catch (IOException exp) {
+        continue;
+      }
+
+      enemiesVec.addElement(enemy);
+    }
+
+    enemies = new EnemySprite[enemiesVec.size()];
+    enemiesVec.copyInto(enemies);
   }
 
   protected void updateMainSprite(long dt, int keyState) {
@@ -72,6 +130,13 @@ public abstract class Chapter extends State {
 
     if (mainSprite.collidesWith(wallLayer, false)) {
       mainSprite.setPosition(old_pos);
+    }
+  }
+
+  protected void updateEnemies(long dt, int keyState) {
+    for (int i = 0; i < enemies.length; ++i) {
+      EnemySprite enemy = enemies[i];
+      enemy.update(dt, wallLayer);
     }
   }
 
@@ -155,6 +220,7 @@ public abstract class Chapter extends State {
   protected TiledLayer wallLayer;
 
   protected MainSprite mainSprite;
+  protected EnemySprite[] enemies;
   protected LayerManager layerManager;
 
   protected Sprite hpSprite, manaSprite;

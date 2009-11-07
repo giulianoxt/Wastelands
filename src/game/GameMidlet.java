@@ -4,10 +4,12 @@ import game.base.State;
 import javax.microedition.lcdui.*;
 import javax.microedition.midlet.*;
 import game.states.ui.SplashScreen;
+import java.util.Random;
 
 public class GameMidlet extends MIDlet implements Runnable {
   private State state;
   private boolean paused;
+  private static Random random = new Random();
   private static GameMidlet midletInstance;
   private static GameDesign gameDesignInstance;
 
@@ -26,6 +28,10 @@ public class GameMidlet extends MIDlet implements Runnable {
       gameDesignInstance = new GameDesign();
 
     return gameDesignInstance;
+  }
+
+  public static Random getRandomInstance() {
+    return random;
   }
 
   public void startApp() {

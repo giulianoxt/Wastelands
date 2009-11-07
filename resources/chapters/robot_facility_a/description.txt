@@ -1,0 +1,14 @@
+start_pos = (1, 6)
+end_pos = (21, 19)
+
+#GuardGreen1 = (9, 3)
+#GuardGreen2 = (17, 2)
+
+#GuardPunk1 = (2, 15)
+#GuardPunk2 = (6, 19)
+#GuardPunk3 = (17, 19)
+
+#GuardYellow1 = (3, 9)
+#GuardYellow2 = (6, 16)
+
+#GuardPunk4 = (9,9)

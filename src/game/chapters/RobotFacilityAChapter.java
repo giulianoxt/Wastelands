@@ -27,7 +27,7 @@ public class RobotFacilityAChapter extends Chapter {
     setEndPoint(new Point(21, 19));
 
     mainSprite = new MainSprite(mainChar);
-    setupLayerManager();
+    setupChapter();
 
     mainSprite.setHP(Constants.INITIAL_HP);
     mainSprite.setMana(Constants.INITIAL_MANA);
@@ -37,6 +37,7 @@ public class RobotFacilityAChapter extends Chapter {
     int keyState = getKeyStates();
 
     updateMainSprite(dt, keyState);
+    updateEnemies(dt, keyState);
     updateViewWindow();
   }
 }
