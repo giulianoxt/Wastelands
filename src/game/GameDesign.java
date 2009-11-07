@@ -17,9 +17,6 @@ public class GameDesign {
 
   //<editor-fold defaultstate="collapsed" desc=" Generated Fields ">//GEN-BEGIN:|fields|0|
   private Image menu_background;
-  private Sprite MenuBackgorund;
-  public int StillDelay = 200;
-  public int[] Still = {0};
   private Image menu_about;
   private Sprite MenuItemAbout;
   public int MenuItemAboutAnimDelay = 200;
@@ -74,6 +71,9 @@ public class GameDesign {
   public int GuardPunkWalkDownDelay = 160;
   public int[] GuardPunkWalkDown = {0, 1, 2};
   private Image guard_punk;
+  private Sprite MenuBackground;
+  public int MenuBackgroundseq001Delay = 200;
+  public int[] MenuBackgroundseq001 = {0, 0, 0, 0, 0};
   //</editor-fold>//GEN-END:|fields|0|
 
   //<editor-fold defaultstate="collapsed" desc=" Generated Methods ">//GEN-BEGIN:|methods|0|
@@ -96,9 +96,9 @@ public class GameDesign {
     getMenuItemPlay().setPosition(105, 60);
     getMenuItemPlay().setVisible(true);
     lm.append(getMenuItemPlay());
-    getMenuBackgorund().setPosition(0, 0);
-    getMenuBackgorund().setVisible(true);
-    lm.append(getMenuBackgorund());//GEN-END:|1-updateLayerManager|1|1-postUpdate
+    getMenuBackground().setPosition(0, 0);
+    getMenuBackground().setVisible(true);
+    lm.append(getMenuBackground());//GEN-END:|1-updateLayerManager|1|1-postUpdate
     // write post-update user code here
   }//GEN-BEGIN:|1-updateLayerManager|2|
 //GEN-END:|1-updateLayerManager|2|
@@ -113,16 +113,7 @@ public class GameDesign {
   }
 //GEN-END:|2-getter|2|
 
-  public Sprite getMenuBackgorund() throws java.io.IOException {//GEN-BEGIN:|3-getter|0|3-preInit
-    if (MenuBackgorund == null) {//GEN-END:|3-getter|0|3-preInit
-      // write pre-init user code here
-      MenuBackgorund = new Sprite(getMenu_background(), 240, 300);//GEN-BEGIN:|3-getter|1|3-postInit
-      MenuBackgorund.setFrameSequence(Still);//GEN-END:|3-getter|1|3-postInit
-      // write post-init user code here
-    }//GEN-BEGIN:|3-getter|2|
-    return MenuBackgorund;
-  }
-//GEN-END:|3-getter|2|
+
 
   public Image getMenu_about() throws java.io.IOException {//GEN-BEGIN:|6-getter|0|6-preInit
     if (menu_about == null) {//GEN-END:|6-getter|0|6-preInit
@@ -332,20 +323,20 @@ public class GameDesign {
         { 4, 0, 0, 0, 4, 4, 4, 4, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 4 },
         { 4, 0, 0, 0, 4, 8, 8, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 4 },
         { 4, 0, 0, 0, 4, 8, 8, 4, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4 },
-        { 4, 0, 0, 0, 4, 8, 8, 4, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4 },
-        { 4, 0, 3, 3, 3, 3, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 4 },
+        { 4, 0, 0, 0, 4, 8, 8, 4, 0, 0, 3, 3, 3, 3, 3, 9, 3, 3, 3, 3, 3, 3, 4 },
+        { 4, 0, 3, 3, 3, 9, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 4 },
         { 4, 3, 0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 4 },
-        { 4, 3, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 0, 3, 3, 3, 3, 4 },
+        { 4, 3, 0, 0, 0, 0, 3, 3, 10, 10, 10, 10, 10, 10, 10, 10, 0, 0, 3, 3, 3, 3, 4 },
         { 4, 3, 0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4 },
         { 4, 3, 0, 0, 0, 0, 3, 3, 0, 0, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 3, 4 },
         { 4, 0, 0, 0, 0, 0, 3, 3, 0, 0, 3, 3, 3, 3, 0, 0, 0, 0, 0, 3, 0, 3, 4 },
         { 4, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 3, 4 },
-        { 4, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 3, 3, 3, 3, 3, 3, 3, 3, 0, 3, 4 },
+        { 4, 0, 3, 3, 3, 9, 3, 3, 3, 3, 3, 0, 3, 3, 9, 3, 3, 3, 3, 3, 0, 3, 4 },
         { 4, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 0, 3, 4 },
         { 4, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 0, 3, 4 },
         { 4, 3, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4 },
         { 4, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4 },
-        { 4, 3, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 3, 3, 3, 3, 4 },
+        { 4, 3, 0, 3, 3, 9, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 9, 4, 3, 3, 3, 3, 4 },
         { 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 4 },
         { 4, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 }
       };//GEN-END:|134-getter|1|134-midInit
@@ -360,6 +351,17 @@ public class GameDesign {
     return RobotFacilityA;//GEN-BEGIN:|134-getter|3|
   }
 //GEN-END:|134-getter|3|
+
+  public Sprite getMenuBackground() throws java.io.IOException {//GEN-BEGIN:|140-getter|0|140-preInit
+    if (MenuBackground == null) {//GEN-END:|140-getter|0|140-preInit
+      // write pre-init user code here
+      MenuBackground = new Sprite(getMenu_background(), 240, 310);//GEN-BEGIN:|140-getter|1|140-postInit
+      MenuBackground.setFrameSequence(MenuBackgroundseq001);//GEN-END:|140-getter|1|140-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|140-getter|2|
+    return MenuBackground;
+  }
+//GEN-END:|140-getter|2|
 
 
 

@@ -66,6 +66,9 @@ public class MainSprite extends Sprite {
     move((int)dx, (int)dy);
   }
 
+
+  private int life;
+
   private int[] current;
   private long frameElapsed;
   private int[] upSeq, downSeq, leftSeq, rightSeq;
