@@ -44,20 +44,27 @@ public class MainMenu extends State {
       setSelectedItem(0);
     } catch (IOException e) {
       e.printStackTrace();
+    } catch (IllegalArgumentException e) {
+      System.out.println("MainMenu()");
     }
   }
 
   private void setSelectedItem(int menuItem) {
+    try {
     if (selectedItem != -1)
       menuItems[selectedItem].setFrame(0);
 
     selectedItem = menuItem;
     menuItems[menuItem].setFrame(1);
+    } catch (IllegalArgumentException e) {
+      System.out.println("setSelectedItem");
+    }
   }
 
   protected void keyPressed(int keyCode) {
     int next = selectedItem;
 
+    try {
     switch (getGameAction(keyCode)) {
       case FIRE:
         selectedAction();
@@ -75,9 +82,13 @@ public class MainMenu extends State {
     }
 
     setSelectedItem(next);
+    } catch (IllegalArgumentException e) {
+      System.out.println("keyPressed");
+    }
   }
 
   private void selectedAction() {
+    try {
     switch (selectedItem) {
       case 0:
         game.gotoDisplayable(ChapterSelection.getInstance());
@@ -95,9 +106,16 @@ public class MainMenu extends State {
         game.quit();
         break;
     }
+    } catch (IllegalArgumentException e) {
+      System.out.println("selectedAction()");
+    }
   }
 
   public void draw(Graphics g) {
+    try {
     layerManager.paint(g, 0, 0);
+    } catch (IllegalArgumentException e) {
+      System.out.println("draw()");
+    }
   }
 }

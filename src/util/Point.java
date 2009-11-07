@@ -14,8 +14,16 @@ public class Point {
     return x;
   }
 
+  public void setX(int _x) {
+    x = _x;
+  }
+
   public int getY() {
     return y;
+  }
+
+  public void setY(int _y) {
+    y = _y;
   }
 
   public void move(int dx, int dy) {

@@ -8,16 +8,24 @@ import game.states.ui.SplashScreen;
 public class GameMidlet extends MIDlet implements Runnable {
   private State state;
   private boolean paused;
-  private static GameMidlet instance;
+  private static GameMidlet midletInstance;
+  private static GameDesign gameDesignInstance;
 
   public GameMidlet() {
     state = null;
-    instance = this;
+    midletInstance = this;
     State.setGameMidlet(this);
   }
 
   public static GameMidlet getInstance() {
-    return instance;
+    return midletInstance;
+  }
+
+  public static GameDesign getDesignInstance() {
+    if (gameDesignInstance == null)
+      gameDesignInstance = new GameDesign();
+
+    return gameDesignInstance;
   }
 
   public void startApp() {
@@ -60,26 +68,31 @@ public class GameMidlet extends MIDlet implements Runnable {
     long tick_time = 1000 / properties.Constants.FPS;
 
     while (true) {
-      if (state == null)
-        continue;
-      
-      long t1 = getTime();
-      long dt = t1 - last_time;
-
-      if (!paused)
-        state.update(dt);
-
-      state.draw();
-
-      long t2 = getTime();
-      long proc_time = t2 - t1;
-      long wait_time = tick_time - proc_time;
-
-      last_time = t2;
-
       try {
+        if (state == null)
+          continue;
+      
+        long t1 = getTime();
+        long dt = t1 - last_time;
+
+        if (!paused)
+          state.update(dt);
+
+        state.draw();
+
+        long t2 = getTime();
+        long proc_time = t2 - t1;
+        long wait_time = tick_time - proc_time;
+
+        last_time = t2;
+
         Thread.sleep(wait_time);
-      } catch (InterruptedException e) {
+      }
+      catch (IllegalArgumentException e) {
+        e.printStackTrace();
+      }
+      catch (Exception e) {
+        e.printStackTrace();
       }
     }
   }

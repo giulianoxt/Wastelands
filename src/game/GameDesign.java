@@ -24,22 +24,56 @@ public class GameDesign {
   private Sprite MenuItemAbout;
   public int MenuItemAboutAnimDelay = 200;
   public int[] MenuItemAboutAnim = {0, 1};
+  private Image robot_facility_tileset;
   private Image menu_exit;
+  private Image splash_wastelands;
   private Sprite MenuItemExit;
   public int MenuItemExitAnimDelay = 200;
   public int[] MenuItemExitAnim = {0, 1};
+  private Image robot_facility_tileset_4;
   private Image menu_play;
   private Sprite MenuItemPlay;
   public int MenuItemPlayAnimDelay = 200;
   public int[] MenuItemPlayAnim = {0, 1};
-  private Image menu_scores;
+  private TiledLayer RobotFacilityA;
   private Sprite MenuItemScores;
   public int MenuItemScoreAnimDelay = 200;
   public int[] MenuItemScoreAnim = {0, 1};
+  private Image menu_scores;
   private Image menu_update;
   private Sprite MenuItemUpdate;
   public int MenuItemUpdateAnimDelay = 200;
   public int[] MenuItemUpdateAnim = {0, 1};
+  private Image main;
+  private Sprite MainSprite;
+  public int MainWalkUpDelay = 160;
+  public int[] MainWalkUp = {9, 10, 11};
+  public int MainWalkRightDelay = 160;
+  public int[] MainWalkRight = {6, 7, 8};
+  public int MainWalkLeftDelay = 160;
+  public int[] MainWalkLeft = {3, 4, 5};
+  public int MainWalkDownDelay = 160;
+  public int[] MainWalkDown = {0, 1, 2};
+  private Sprite GuardGreen;
+  public int GuardGreenWalkLeftDelay = 160;
+  public int[] GuardGreenWalkLeft = {3, 4, 5};
+  public int GuardGreenWalkDownDelay = 160;
+  public int[] GuardGreenWalkDown = {0, 1, 2};
+  public int GuardGreenWalkUpDelay = 160;
+  public int[] GuardGreenWalkUp = {9, 10, 11};
+  public int GuardGreenWalkRightDelay = 160;
+  public int[] GuardGreenWalkRight = {6, 7, 8};
+  private Image guard_green;
+  private Sprite GuardPunk;
+  public int GuardPunkWalkUpDelay = 160;
+  public int[] GuardPunkWalkUp = {9, 10, 11};
+  public int GuardPunkWalkRightDelay = 160;
+  public int[] GuardPunkWalkRight = {6, 7, 8};
+  public int GuardPunkWalkLeftDelay = 160;
+  public int[] GuardPunkWalkLeft = {3, 4, 5};
+  public int GuardPunkWalkDownDelay = 160;
+  public int[] GuardPunkWalkDown = {0, 1, 2};
+  private Image guard_punk;
   //</editor-fold>//GEN-END:|fields|0|
 
   //<editor-fold defaultstate="collapsed" desc=" Generated Methods ">//GEN-BEGIN:|methods|0|
@@ -194,5 +228,139 @@ public class GameDesign {
     return MenuItemUpdate;
   }
 //GEN-END:|20-getter|2|
+
+  public Image getMain() throws java.io.IOException {//GEN-BEGIN:|110-getter|0|110-preInit
+    if (main == null) {//GEN-END:|110-getter|0|110-preInit
+      // write pre-init user code here
+      main = Image.createImage("/sprites/main.png");//GEN-BEGIN:|110-getter|1|110-postInit
+    }//GEN-END:|110-getter|1|110-postInit
+    // write post-init user code here
+    return this.main;//GEN-BEGIN:|110-getter|2|
+  }
+//GEN-END:|110-getter|2|
+
+  public Sprite getMainSprite() throws java.io.IOException {//GEN-BEGIN:|111-getter|0|111-preInit
+    if (MainSprite == null) {//GEN-END:|111-getter|0|111-preInit
+      // write pre-init user code here
+      MainSprite = new Sprite(getMain(), 32, 32);//GEN-BEGIN:|111-getter|1|111-postInit
+      MainSprite.setFrameSequence(MainWalkDown);//GEN-END:|111-getter|1|111-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|111-getter|2|
+    return MainSprite;
+  }
+//GEN-END:|111-getter|2|
+
+  public Image getGuard_green() throws java.io.IOException {//GEN-BEGIN:|116-getter|0|116-preInit
+    if (guard_green == null) {//GEN-END:|116-getter|0|116-preInit
+      // write pre-init user code here
+      guard_green = Image.createImage("/sprites/guard_green.png");//GEN-BEGIN:|116-getter|1|116-postInit
+    }//GEN-END:|116-getter|1|116-postInit
+    // write post-init user code here
+    return this.guard_green;//GEN-BEGIN:|116-getter|2|
+  }
+//GEN-END:|116-getter|2|
+
+  public Sprite getGuardGreen() throws java.io.IOException {//GEN-BEGIN:|117-getter|0|117-preInit
+    if (GuardGreen == null) {//GEN-END:|117-getter|0|117-preInit
+      // write pre-init user code here
+      GuardGreen = new Sprite(getGuard_green(), 32, 32);//GEN-BEGIN:|117-getter|1|117-postInit
+      GuardGreen.setFrameSequence(GuardGreenWalkDown);//GEN-END:|117-getter|1|117-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|117-getter|2|
+    return GuardGreen;
+  }
+//GEN-END:|117-getter|2|
+
+  public Image getGuard_punk() throws java.io.IOException {//GEN-BEGIN:|122-getter|0|122-preInit
+    if (guard_punk == null) {//GEN-END:|122-getter|0|122-preInit
+      // write pre-init user code here
+      guard_punk = Image.createImage("/sprites/guard_punk.png");//GEN-BEGIN:|122-getter|1|122-postInit
+    }//GEN-END:|122-getter|1|122-postInit
+    // write post-init user code here
+    return this.guard_punk;//GEN-BEGIN:|122-getter|2|
+  }
+//GEN-END:|122-getter|2|
+
+  public Sprite getGuardPunk() throws java.io.IOException {//GEN-BEGIN:|123-getter|0|123-preInit
+    if (GuardPunk == null) {//GEN-END:|123-getter|0|123-preInit
+      // write pre-init user code here
+      GuardPunk = new Sprite(getGuard_punk(), 32, 32);//GEN-BEGIN:|123-getter|1|123-postInit
+      GuardPunk.setFrameSequence(GuardPunkWalkDown);//GEN-END:|123-getter|1|123-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|123-getter|2|
+    return GuardPunk;
+  }
+//GEN-END:|123-getter|2|
+
+  public Image getRobot_facility_tileset() throws java.io.IOException {//GEN-BEGIN:|128-getter|0|128-preInit
+    if (robot_facility_tileset == null) {//GEN-END:|128-getter|0|128-preInit
+      // write pre-init user code here
+      robot_facility_tileset = Image.createImage("/sprites/robot_facility_tileset.png");//GEN-BEGIN:|128-getter|1|128-postInit
+    }//GEN-END:|128-getter|1|128-postInit
+    // write post-init user code here
+    return this.robot_facility_tileset;//GEN-BEGIN:|128-getter|2|
+  }
+//GEN-END:|128-getter|2|
+
+  public Image getSplash_wastelands() throws java.io.IOException {//GEN-BEGIN:|130-getter|0|130-preInit
+    if (splash_wastelands == null) {//GEN-END:|130-getter|0|130-preInit
+      // write pre-init user code here
+      splash_wastelands = Image.createImage("/splash_wastelands.png");//GEN-BEGIN:|130-getter|1|130-postInit
+    }//GEN-END:|130-getter|1|130-postInit
+    // write post-init user code here
+    return this.splash_wastelands;//GEN-BEGIN:|130-getter|2|
+  }
+//GEN-END:|130-getter|2|
+
+  public Image getRobot_facility_tileset_4() throws java.io.IOException {//GEN-BEGIN:|132-getter|0|132-preInit
+    if (robot_facility_tileset_4 == null) {//GEN-END:|132-getter|0|132-preInit
+      // write pre-init user code here
+      robot_facility_tileset_4 = Image.createImage("/sprites/robot_facility_tileset_4.png");//GEN-BEGIN:|132-getter|1|132-postInit
+    }//GEN-END:|132-getter|1|132-postInit
+    // write post-init user code here
+    return this.robot_facility_tileset_4;//GEN-BEGIN:|132-getter|2|
+  }
+//GEN-END:|132-getter|2|
+
+  public TiledLayer getRobotFacilityA() throws java.io.IOException {//GEN-BEGIN:|134-getter|0|134-preInit
+    if (RobotFacilityA == null) {//GEN-END:|134-getter|0|134-preInit
+      // write pre-init user code here
+      RobotFacilityA = new TiledLayer(23, 21, getRobot_facility_tileset_4(), 48, 48);//GEN-BEGIN:|134-getter|1|134-midInit
+      int[][] tiles = {
+        { 4, 9, 4, 4, 9, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 9, 4, 4, 4, 4, 4 },
+        { 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 4 },
+        { 4, 0, 0, 0, 4, 4, 4, 4, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 4 },
+        { 4, 0, 0, 0, 4, 8, 8, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 4 },
+        { 4, 0, 0, 0, 4, 8, 8, 4, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4 },
+        { 4, 0, 0, 0, 4, 8, 8, 4, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4 },
+        { 4, 0, 3, 3, 3, 3, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 4 },
+        { 4, 3, 0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 4 },
+        { 4, 3, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 0, 3, 3, 3, 3, 4 },
+        { 4, 3, 0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4 },
+        { 4, 3, 0, 0, 0, 0, 3, 3, 0, 0, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 3, 4 },
+        { 4, 0, 0, 0, 0, 0, 3, 3, 0, 0, 3, 3, 3, 3, 0, 0, 0, 0, 0, 3, 0, 3, 4 },
+        { 4, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 3, 4 },
+        { 4, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 3, 3, 3, 3, 3, 3, 3, 3, 0, 3, 4 },
+        { 4, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 0, 3, 4 },
+        { 4, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 0, 3, 4 },
+        { 4, 3, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4 },
+        { 4, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4 },
+        { 4, 3, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 3, 3, 3, 3, 4 },
+        { 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 4 },
+        { 4, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 }
+      };//GEN-END:|134-getter|1|134-midInit
+      // write mid-init user code here
+      for (int row = 0; row < 21; row++) {//GEN-BEGIN:|134-getter|2|134-postInit
+        for (int col = 0; col < 23; col++) {
+          RobotFacilityA.setCell(col, row, tiles[row][col]);
+        }
+      }
+    }//GEN-END:|134-getter|2|134-postInit
+    // write post-init user code here
+    return RobotFacilityA;//GEN-BEGIN:|134-getter|3|
+  }
+//GEN-END:|134-getter|3|
+
+
 
 }

@@ -1,4 +1,4 @@
-package game.states;
+package game.chapters;
 
 import util.Point;
 import game.base.State;
@@ -43,7 +43,7 @@ public class Chapter extends State {
   }
 
   protected String chapterId, chapterName;
-
-  protected TiledLayer wallLayer;
+  
   protected Point startPoint, endPoint;
+  protected TiledLayer wallLayer;
 }

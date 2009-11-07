@@ -3,7 +3,7 @@ package game.states.ui;
 import util.Util;
 import game.GameMidlet;
 import game.base.ChapterStore;
-import game.states.Chapter;
+import game.chapters.Chapter;
 import javax.microedition.lcdui.*;
 
 public class ChapterSelection extends Form {
