@@ -6,6 +6,7 @@ import java.io.IOException;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.game.LayerManager;
 import javax.microedition.lcdui.game.Sprite;
+import properties.Constants;
 
 public class MainMenu extends State {
   private GameDesign gameDesign;
@@ -38,7 +39,9 @@ public class MainMenu extends State {
       menuItems[4] = gameDesign.getMenuItemExit();
 
       gameDesign.updateLayerManagerForMainMenu(layerManager);
-      layerManager.setViewWindow(0, 0, 240, 300);
+      layerManager.setViewWindow(
+        0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT
+      );
 
       selectedItem = -1;
       setSelectedItem(0);

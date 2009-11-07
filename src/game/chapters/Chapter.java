@@ -16,6 +16,7 @@ public abstract class Chapter extends State {
     chapterName = name;
 
     hpSprite = new Sprite(Util.getImage("/sprites/bolt.png"));
+    manaSprite = new Sprite(Util.getImage("/sprites/mana.png"));
   }
 
   public String getId() {
@@ -57,6 +58,7 @@ public abstract class Chapter extends State {
     );
 
     layerManager.append(hpSprite);
+    layerManager.append(manaSprite);
     layerManager.append(mainSprite);
     layerManager.append(wallLayer);
 
@@ -106,9 +108,15 @@ public abstract class Chapter extends State {
     int viewc_ty = viewc_y - view_h2;
 
     layerManager.setViewWindow(viewc_tx, viewc_ty, view_w, view_h);
+
     hpSprite.setPosition(
-      viewc_tx + Constants.HEART_X,
-      viewc_ty + Constants.HEART_Y
+      viewc_tx + Constants.HP_X,
+      viewc_ty + Constants.HP_Y
+    );
+
+    manaSprite.setPosition(
+      viewc_tx + Constants.MANA_X,
+      viewc_ty + Constants.MANA_Y
     );
   }
 
@@ -125,10 +133,18 @@ public abstract class Chapter extends State {
     layerManager.paint(g, 0, 0);
 
     g.setColor(255, 255, 255);
+
     g.drawString(
-      new Integer(mainSprite.getHP()).toString(),
+      "" + mainSprite.getHP(),
       hpSprite.getWidth() + 3,
       hpSprite.getHeight() / 2 - 3,
+      Graphics.TOP | Graphics.LEFT
+    );
+
+    g.drawString(
+      "" + mainSprite.getMana(),
+      manaSprite.getWidth() + 3,
+      Constants.MANA_Y + manaSprite.getHeight() / 2 - 8,
       Graphics.TOP | Graphics.LEFT
     );
   }
@@ -141,5 +157,5 @@ public abstract class Chapter extends State {
   protected MainSprite mainSprite;
   protected LayerManager layerManager;
 
-  protected Sprite hpSprite;
+  protected Sprite hpSprite, manaSprite;
 }

@@ -42,6 +42,14 @@ public class MainSprite extends Sprite {
     hp = _hp;
   }
 
+  public int getMana() {
+    return mana;
+  }
+
+  public void setMana(int _mana) {
+    mana = _mana;
+  }
+
   public void update(long dt, int keyState) {
     double dx = 0, dy = 0, d = dt * Constants.CHAR_VELOCITY;
 
@@ -75,7 +83,7 @@ public class MainSprite extends Sprite {
   }
 
 
-  private int hp;
+  private int hp, mana;
 
   private int[] current;
   private long frameElapsed;
