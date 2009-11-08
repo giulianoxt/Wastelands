@@ -18,8 +18,8 @@ public class SplashScreen extends State {
     timeElapsed = 0;
   }
 
-  public void update(long delta) { 
-    timeElapsed += delta;
+  public void update(long dt) {
+    timeElapsed += dt;
 
     if (timeElapsed >= Constants.SPLASH_DURATION ||
         getKeyStates() != 0) {

@@ -27,7 +27,7 @@ public class EnemySprite extends Sprite {
     setPosition(p.getX(), p.getY());
   }
 
-  private void setAnimation(int[] seq) {
+  protected void setAnimation(int[] seq) {
     if (seq != current)
       frameElapsed = 0;
 
@@ -44,6 +44,21 @@ public class EnemySprite extends Sprite {
   }
 
   public void update(long dt, TiledLayer walls) {
+    int old_x = getX(), old_y = getY();
+
+    randomUpdate(dt, walls);
+
+    if (old_x != getX() || old_y != getY()) {
+      frameElapsed += dt;
+
+      if (frameElapsed >= Constants.ANIM_FRAME_DURATION) {
+        frameElapsed = 0;
+        nextFrame();
+      }
+    }
+  }
+
+  protected void randomUpdate(long dt, TiledLayer walls) {
     double dx = 0, dy = 0, d = dt * Constants.ENEMY_VELOCITY;
 
     if (current == leftSeq) {
@@ -60,7 +75,6 @@ public class EnemySprite extends Sprite {
 
     if (collidesWith(walls, false)) {
       move(-(int)dx, -(int)dy);
-      dx = dy = 0;
 
       int r = GameMidlet.getRandomInstance().nextInt(4);
 
@@ -73,19 +87,10 @@ public class EnemySprite extends Sprite {
       else
         setAnimation(rightSeq);
     }
-
-    if (dx != 0 || dy != 0) {
-      frameElapsed += dt;
-
-      if (frameElapsed >= Constants.ANIM_FRAME_DURATION) {
-        frameElapsed = 0;
-        nextFrame();
-      }
-    }
   }
 
-  private int hp;
-  private int[] current;
-  private long frameElapsed;
-  private int[] upSeq, downSeq, leftSeq, rightSeq;
+  protected int hp;
+  protected int[] current;
+  protected long frameElapsed;
+  protected int[] upSeq, downSeq, leftSeq, rightSeq;
 }

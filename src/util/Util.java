@@ -9,6 +9,12 @@ import javax.microedition.lcdui.Image;
 import javax.microedition.lcdui.game.Sprite;
 
 public class Util {
+  public static int getDistance2(Sprite a, Sprite b) {
+    int dx = a.getX() - b.getX();
+    int dy = a.getY() - b.getY();
+    return dx*dx + dy*dy;
+  }
+
   public static Image getImage(String filepath) {
     if (imageCache.containsKey(filepath)) {
       return (Image)imageCache.get(filepath);

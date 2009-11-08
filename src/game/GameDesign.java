@@ -24,12 +24,12 @@ public class GameDesign {
   public int[] MenuItemAboutAnim = {0, 1};
   private Image robot_facility_tileset;
   private Image menu_exit;
+  private Image splash_wastelands;
   private Sprite MenuItemExit;
   public int MenuItemExitAnimDelay = 200;
   public int[] MenuItemExitAnim = {0, 1};
-  private Image splash_wastelands;
-  private Image menu_play;
   private Image robot_facility_tileset_4;
+  private Image menu_play;
   private Sprite MenuItemPlay;
   public int MenuItemPlayAnimDelay = 200;
   public int[] MenuItemPlayAnim = {0, 1};
@@ -42,6 +42,10 @@ public class GameDesign {
   private Sprite MenuItemUpdate;
   public int MenuItemUpdateAnimDelay = 200;
   public int[] MenuItemUpdateAnim = {0, 1};
+  private Image blue_ball;
+  private Sprite BlueBall;
+  public int BlueBallseq003Delay = 200;
+  public int[] BlueBallseq003 = {0};
   private Image guard_yellow;
   private Sprite GuardYellow;
   public int GuardYelloWalkRightDelay = 200;
@@ -82,10 +86,10 @@ public class GameDesign {
   public int GuardPunkWalkDownDelay = 160;
   public int[] GuardPunkWalkDown = {0, 1, 2};
   private Image guard_punk;
-  private Image blue_ball;
-  private Sprite BlueBall;
-  public int BlueBallseq003Delay = 200;
-  public int[] BlueBallseq003 = {0};
+  private Image red_ball;
+  private Sprite RedBall;
+  public int RedBallseq001Delay = 200;
+  public int[] RedBallseq001 = {0, 0, 0, 0, 0};
   //</editor-fold>//GEN-END:|fields|0|
 
   //<editor-fold defaultstate="collapsed" desc=" Generated Methods ">//GEN-BEGIN:|methods|0|
@@ -418,6 +422,27 @@ public class GameDesign {
     return BlueBall;
   }
 //GEN-END:|189-getter|2|
+
+  public Image getRed_ball() throws java.io.IOException {//GEN-BEGIN:|191-getter|0|191-preInit
+    if (red_ball == null) {//GEN-END:|191-getter|0|191-preInit
+      // write pre-init user code here
+      red_ball = Image.createImage("/sprites/red_ball.png");//GEN-BEGIN:|191-getter|1|191-postInit
+    }//GEN-END:|191-getter|1|191-postInit
+    // write post-init user code here
+    return this.red_ball;//GEN-BEGIN:|191-getter|2|
+  }
+//GEN-END:|191-getter|2|
+
+  public Sprite getRedBall() throws java.io.IOException {//GEN-BEGIN:|192-getter|0|192-preInit
+    if (RedBall == null) {//GEN-END:|192-getter|0|192-preInit
+      // write pre-init user code here
+      RedBall = new Sprite(getRed_ball(), 42, 14);//GEN-BEGIN:|192-getter|1|192-postInit
+      RedBall.setFrameSequence(RedBallseq001);//GEN-END:|192-getter|1|192-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|192-getter|2|
+    return RedBall;
+  }
+//GEN-END:|192-getter|2|
 
 
 

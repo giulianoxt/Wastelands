@@ -7,6 +7,7 @@ import game.base.Power;
 import util.Point;
 import game.base.State;
 import game.sprites.EnemySprite;
+import game.sprites.MageEnemySprite;
 import game.sprites.MainSprite;
 import java.io.IOException;
 import java.util.Enumeration;
@@ -121,7 +122,7 @@ public abstract class Chapter extends State {
           enemy = new EnemySprite(design.getGuardPunk());
           enemy.setHP(100);
         } else if (key.startsWith("GuardYellow")) {
-          enemy = new EnemySprite(design.getGuardYellow());
+          enemy = new MageEnemySprite(design.getGuardYellow());
           enemy.setHP(50);
         } else {
           continue;
