@@ -3,6 +3,7 @@ package game.fx;
 import game.attacks.AttackSensor;
 import game.base.Power;
 import game.chapters.Chapter;
+import game.sprites.EnemySprite;
 import game.sprites.MainSprite;
 import javax.microedition.lcdui.game.Sprite;
 import util.Util;
@@ -46,7 +47,9 @@ public class LightSaberPower extends Power {
   }
 
   public void collidedWith(Sprite p) {
-    // tirar dano
+    EnemySprite enemy = (EnemySprite)p;
+    enemy.setHP(Math.max(enemy.getHP() - getDamage(), 0));
+    remove();
   }
 
   public boolean collidedWithWall() {

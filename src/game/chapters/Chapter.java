@@ -6,6 +6,7 @@ import game.attacks.AttackSensor;
 import game.base.Power;
 import util.Point;
 import game.base.State;
+import game.fx.LightSaberPower;
 import game.sprites.EnemySprite;
 import game.sprites.MainSprite;
 import java.io.IOException;
@@ -100,7 +101,7 @@ public abstract class Chapter extends State {
     props.remove("start_pos");
     props.remove("end_pos");
 
-    Vector enemiesVec = new Vector(10);
+    enemies = new Vector(10);
     EnemySprite enemy = null;
     GameDesign design = GameMidlet.getDesignInstance();
 
@@ -116,10 +117,13 @@ public abstract class Chapter extends State {
       try {
         if (key.startsWith("GuardGreen")) {
           enemy = new EnemySprite(design.getGuardGreen());
+          enemy.setHP(50);
         } else if (key.startsWith("GuardPunk")) {
           enemy = new EnemySprite(design.getGuardPunk());
+          enemy.setHP(100);
         } else if (key.startsWith("GuardYellow")) {
           enemy = new EnemySprite(design.getGuardYellow());
+          enemy.setHP(50);
         } else {
           continue;
         }
@@ -129,11 +133,8 @@ public abstract class Chapter extends State {
         continue;
       }
 
-      enemiesVec.addElement(enemy);
+      enemies.addElement(enemy);
     }
-
-    enemies = new EnemySprite[enemiesVec.size()];
-    enemiesVec.copyInto(enemies);
   }
 
   protected void setupSensors() {
@@ -151,8 +152,8 @@ public abstract class Chapter extends State {
     layerManager.append(mainSprite);
     mainSprite.setPosition(fromLayerToScene(getStartPoint()));
 
-    for (int i = 0; i < enemies.length; ++i) {
-      layerManager.append(enemies[i]);
+    for (int i = 0; i < enemies.size(); ++i) {
+      layerManager.append((Sprite)enemies.elementAt(i));
     }
 
     layerManager.append(wallLayer);
@@ -161,6 +162,11 @@ public abstract class Chapter extends State {
   public void addPower(Power p) {
     powers.addElement(p);
     layerManager.insert(p, layerManager.getSize()-2);
+  }
+
+  public void removePower(Power p) {
+    powers.removeElement(p);
+    layerManager.remove(p);
   }
 
   protected void updateMainSprite(long dt, int keyState) {
@@ -174,8 +180,8 @@ public abstract class Chapter extends State {
   }
 
   protected void updateEnemies(long dt) {
-    for (int i = 0; i < enemies.length; ++i) {
-      EnemySprite enemy = enemies[i];
+    for (Enumeration e = enemies.elements(); e.hasMoreElements();) {
+      EnemySprite enemy = (EnemySprite)e.nextElement();
       enemy.update(dt, wallLayer);
     }
   }
@@ -189,12 +195,25 @@ public abstract class Chapter extends State {
 
       if (p.collidesWith(wallLayer, true) && p.collidedWithWall())
         to_remove.addElement(p);
+
+      for (Enumeration e2 = enemies.elements(); e2.hasMoreElements();) {
+        EnemySprite enemy = (EnemySprite)e2.nextElement();
+
+        if (p.collidesWith(enemy, true)) {
+          p.collidedWith(enemy);
+
+          if (enemy.getHP() == 0)
+            to_remove.addElement(enemy);
+        }
+      }
+
     }
 
     for (Enumeration e = to_remove.elements(); e.hasMoreElements();) {
-      Power p = (Power)e.nextElement();
-      powers.removeElement(p);
-      layerManager.remove(p);
+      Sprite s = (Sprite)e.nextElement();
+      powers.removeElement(s);
+      enemies.removeElement(s);
+      layerManager.remove(s);
     }
   }
 
@@ -288,8 +307,7 @@ public abstract class Chapter extends State {
   protected TiledLayer wallLayer;
 
   protected MainSprite mainSprite;
-  protected EnemySprite[] enemies;
-  protected Vector powers;
+  protected Vector powers, enemies;
   protected LayerManager layerManager;
 
   protected AttackSensor[] attackSensors;

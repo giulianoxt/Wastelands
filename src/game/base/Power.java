@@ -15,6 +15,10 @@ public abstract class Power extends Sprite {
     return damage;
   }
 
+  public void remove() {
+    getCurrentChapter().removePower(this);
+  }
+
   public abstract void update(long dt, int keyState);
   public abstract void collidedWith(Sprite p);
   public abstract boolean collidedWithWall();

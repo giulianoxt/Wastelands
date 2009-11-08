@@ -1,6 +1,7 @@
 package game.fx;
 
 import game.base.Power;
+import game.sprites.EnemySprite;
 import javax.microedition.lcdui.game.Sprite;
 import properties.Constants;
 import javax.microedition.lcdui.Image;
@@ -36,7 +37,9 @@ public class LongRangePower extends Power {
   }
 
   public void collidedWith(Sprite p) {
-    // tirar life
+    EnemySprite enemy = (EnemySprite)p;
+    enemy.setHP(Math.max(enemy.getHP() - getDamage(), 0));
+    remove();
   }
 
   public boolean collidedWithWall() {
