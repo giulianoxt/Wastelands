@@ -2,6 +2,8 @@ package game.sprites;
 
 import game.GameMidlet;
 import game.chapters.Chapter;
+import game.fx.EnemyLongRangePower;
+import game.fx.LongRangePower;
 import javax.microedition.lcdui.game.Sprite;
 import javax.microedition.lcdui.game.TiledLayer;
 import properties.Constants;
@@ -10,6 +12,7 @@ import util.Util;
 public class MageEnemySprite extends EnemySprite {
   public MageEnemySprite(Sprite sprite) {
     super(sprite);
+    elapsed = 0;
   }
 
   public void update(long dt, TiledLayer walls) {
@@ -18,11 +21,16 @@ public class MageEnemySprite extends EnemySprite {
     MainSprite main = chapter.getMainSprite();
 
     int old_x = getX(), old_y = getY();
+    int dist2 = Util.getDistance2(this, main);
 
-    if (Util.getDistance2(this, main) <= Constants.ENEMY_ATTACK_DISTANCE2) {
+    if (dist2 <= Constants.MAGE_ATTACK_DISTANCE2) {
       attackUpdate(dt, walls, main);
+    } else if (dist2 <= Constants.ENEMY_PURSUIT_DISTANCE2) {
+      elapsed = 0;
+      pursuitUpdate(dt, walls, main);
     }
     else {
+      elapsed = 0;
       randomUpdate(dt, walls);
     }
 
@@ -37,6 +45,49 @@ public class MageEnemySprite extends EnemySprite {
   }
 
   protected void attackUpdate(long dt, TiledLayer walls, Sprite main) {
+    int movement;
+    int dx = main.getX() - getX(), dy = main.getY() - getY();
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+      if (dx <= 0) {
+        movement = 2;
+        setAnimation(leftSeq);
+      }
+      else {
+        movement = 3;
+        setAnimation(rightSeq);
+      }
+    }
+    else {
+      if (dy <= 0) {
+        movement = 0;
+        setAnimation(upSeq);
+      }
+      else {
+        movement = 1;
+        setAnimation(downSeq);
+      }
+    }
+
+    elapsed += dt;
+
+    if (elapsed < Constants.MAGE_ATTACK_DELAY)
+      return;
+    
+    elapsed = 0;
+
+    EnemyLongRangePower power = new EnemyLongRangePower(
+      10, Util.getImage("/sprites/white_ball.png")
+    );
+
+    power.setMovement(movement);
+    Util.adjustPositionToMovement(power, this, movement);
+
+    Chapter c = (Chapter)GameMidlet.getInstance().getCurrentState();
+    c.addPower(power);
+  }
+
+  protected void pursuitUpdate(long dt, TiledLayer walls, Sprite main) {
     double mdx = 0, mdy = 0, md = dt * Constants.ENEMY_VELOCITY;
 
     int dx = main.getX() - getX(), dy = main.getY() - getY();
@@ -65,4 +116,6 @@ public class MageEnemySprite extends EnemySprite {
       move(-(int)mdx, -(int)mdy);
     }
   }
+
+  private long elapsed;
 }

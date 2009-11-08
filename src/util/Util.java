@@ -1,6 +1,5 @@
 package util;
 
-import game.sprites.MainSprite;
 import java.util.Hashtable;
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,7 +29,7 @@ public class Util {
   }
 
   public static void adjustPositionToMovement(
-      Sprite sprite, MainSprite main, int movement) {
+      Sprite sprite, Sprite main, int movement) {
     int dx = 0, dy = 0;
 
     switch (movement) {

@@ -161,7 +161,8 @@ public abstract class Chapter extends State {
 
   public void addPower(Power p) {
     powers.addElement(p);
-    layerManager.insert(p, layerManager.getSize()-2);
+    int pos = Math.max(0, layerManager.getSize() - 2);
+    layerManager.insert(p, pos);
   }
 
   public void removePower(Power p) {
@@ -205,6 +206,10 @@ public abstract class Chapter extends State {
           if (enemy.getHP() == 0)
             to_remove.addElement(enemy);
         }
+      }
+
+      if (p.collidesWith(mainSprite, true)) {
+        p.collidedWith(mainSprite);
       }
     }
 
