@@ -6,6 +6,7 @@ public final class Constants {
 
   public static final int FPS = 25;
   public static final long SPLASH_DURATION = 3 * 1000;
+  public static final long DIALOG_DURATION = 2800;
   public static final long ANIM_FRAME_DURATION = 200;
   public static final long DOUBLE_PRESS_WINDOW = 1000;
 

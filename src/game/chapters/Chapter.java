@@ -6,6 +6,7 @@ import game.attacks.AttackSensor;
 import game.base.Power;
 import util.Point;
 import game.base.State;
+import game.dialogs.DialogSensor;
 import game.sprites.EnemySprite;
 import game.sprites.MageEnemySprite;
 import game.sprites.MainSprite;
@@ -31,6 +32,7 @@ public abstract class Chapter extends State {
     manaSprite = new Sprite(Util.getImage("/sprites/mana.png"));
 
     powers = new Vector(5);
+    dialogSensors = new Vector(5);
 
     interfaceImg = Util.getImage("/sprites/interface.png");
   }
@@ -81,6 +83,10 @@ public abstract class Chapter extends State {
 
   public void setMainChar(Sprite main) {
     mainChar = main;
+  }
+
+  public void addDialogSensor(DialogSensor sensor) {
+    dialogSensors.addElement(sensor);
   }
 
   protected void setupChapter() {
@@ -225,13 +231,20 @@ public abstract class Chapter extends State {
     }
   }
 
-  protected void updateSensors(long dt, int keyState) {
+  protected void updateAttackSensors(long dt, int keyState) {
     for (int i = 0; i < attackSensors.length; ++i) {
       AttackSensor sensor = attackSensors[i];
 
       if (sensor.update(dt, keyState)) {
         sensor.run(this);
       }
+    }
+  }
+
+  protected void updateDialogSensors(long dt, int keyState) {
+    for (int i = 0; i < dialogSensors.size(); ++i) {
+      DialogSensor sensor = (DialogSensor)dialogSensors.elementAt(i);
+      sensor.update(dt, keyState);
     }
   }
 
@@ -322,6 +335,7 @@ public abstract class Chapter extends State {
   protected Vector powers, enemies;
   protected LayerManager layerManager;
 
+  protected Vector dialogSensors;
   protected AttackSensor[] attackSensors;
 
   protected Sprite mainChar;
