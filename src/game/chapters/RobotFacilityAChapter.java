@@ -2,25 +2,21 @@ package game.chapters;
 
 import game.GameDesign;
 import game.GameMidlet;
-import javax.microedition.lcdui.game.*;
+import java.io.IOException;
 
 public class RobotFacilityAChapter extends Chapter {
   public RobotFacilityAChapter() {
     super("robot_facility_a", "Robot Facility A");
 
-    Sprite mainChar = null;
-    TiledLayer walls = null;
+    GameDesign design = GameMidlet.getDesignInstance();
 
     try {
-      GameDesign design = GameMidlet.getDesignInstance();
-      mainChar = design.getMainSprite();
-      walls = design.getRobotFacilityA();
-    } catch (Exception e) {
+      setMainChar(design.getMainSprite());
+      setWallLayer(design.getRobotFacilityA());
+    } catch (IOException e) {
       e.printStackTrace();
     }
 
-    setWallLayer(walls);
-    setMainChar(mainChar);
     setupChapter();
   }
 
@@ -28,7 +24,8 @@ public class RobotFacilityAChapter extends Chapter {
     int keyState = getKeyStates();
 
     updateMainSprite(dt, keyState);
-    updateEnemies(dt, keyState);
+    updateEnemies(dt);
+    updateSensors(dt, keyState);
     updateViewWindow();
   }
 }

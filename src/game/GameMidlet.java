@@ -92,7 +92,8 @@ public class GameMidlet extends MIDlet implements Runnable {
 
         last_time = t2;
 
-        Thread.sleep(wait_time);
+        if (wait_time > 0)
+          Thread.sleep(wait_time);
       }
       catch (IllegalArgumentException e) {
         e.printStackTrace();

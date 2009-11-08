@@ -48,7 +48,6 @@ public class MainMenu extends State {
     } catch (IOException e) {
       e.printStackTrace();
     } catch (IllegalArgumentException e) {
-      System.out.println("MainMenu()");
     }
   }
 

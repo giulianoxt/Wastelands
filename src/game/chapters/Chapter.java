@@ -2,6 +2,7 @@ package game.chapters;
 
 import game.GameDesign;
 import game.GameMidlet;
+import game.attacks.AttackSensor;
 import util.Point;
 import game.base.State;
 import game.sprites.EnemySprite;
@@ -65,6 +66,7 @@ public abstract class Chapter extends State {
   protected void setupChapter() {
     setupMainSprite();
     setupEnemies();
+    setupSensors();
     setupLayerManager();
   }
   
@@ -72,24 +74,6 @@ public abstract class Chapter extends State {
     mainSprite = new MainSprite(mainChar);
     mainSprite.setHP(Constants.INITIAL_HP);
     mainSprite.setMana(Constants.INITIAL_MANA);
-  }
-
-  protected void setupLayerManager() {
-    layerManager = new LayerManager();
-    layerManager.setViewWindow(
-      0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT
-    );
-
-    layerManager.append(hpSprite);
-    layerManager.append(manaSprite);
-    layerManager.append(mainSprite);
-    mainSprite.setPosition(fromLayerToScene(getStartPoint()));
-
-    for (int i = 0; i < enemies.length; ++i) {
-      layerManager.append(enemies[i]);
-    }
-
-    layerManager.append(wallLayer);
   }
 
   protected void setupEnemies() {
@@ -137,6 +121,28 @@ public abstract class Chapter extends State {
     enemiesVec.copyInto(enemies);
   }
 
+  protected void setupSensors() {
+    attackSensors = AttackSensor.getAttackSensors();
+  }
+
+  protected void setupLayerManager() {
+    layerManager = new LayerManager();
+    layerManager.setViewWindow(
+      0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT
+    );
+
+    layerManager.append(hpSprite);
+    layerManager.append(manaSprite);
+    layerManager.append(mainSprite);
+    mainSprite.setPosition(fromLayerToScene(getStartPoint()));
+
+    for (int i = 0; i < enemies.length; ++i) {
+      layerManager.append(enemies[i]);
+    }
+
+    layerManager.append(wallLayer);
+  }
+
   protected void updateMainSprite(long dt, int keyState) {
     Point old_pos = new Point(mainSprite.getX(), mainSprite.getY());
 
@@ -147,10 +153,20 @@ public abstract class Chapter extends State {
     }
   }
 
-  protected void updateEnemies(long dt, int keyState) {
+  protected void updateEnemies(long dt) {
     for (int i = 0; i < enemies.length; ++i) {
       EnemySprite enemy = enemies[i];
       enemy.update(dt, wallLayer);
+    }
+  }
+
+  protected void updateSensors(long dt, int keyState) {
+    for (int i = 0; i < attackSensors.length; ++i) {
+      AttackSensor sensor = attackSensors[i];
+
+      if (sensor.update(dt, keyState)) {
+        sensor.run(this);
+      }
     }
   }
 
@@ -236,6 +252,8 @@ public abstract class Chapter extends State {
   protected MainSprite mainSprite;
   protected EnemySprite[] enemies;
   protected LayerManager layerManager;
+
+  protected AttackSensor[] attackSensors;
 
   protected Sprite mainChar;
   protected Sprite hpSprite, manaSprite;
