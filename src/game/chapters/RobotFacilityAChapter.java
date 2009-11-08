@@ -25,7 +25,7 @@ public class RobotFacilityAChapter extends Chapter {
 
     updateMainSprite(dt, keyState);
     updateEnemies(dt);
-    updatePowers(dt);
+    updatePowers(dt, keyState);
     updateSensors(dt, keyState);
     updateViewWindow();
   }

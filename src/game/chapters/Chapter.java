@@ -62,6 +62,14 @@ public abstract class Chapter extends State {
     return wallLayer;
   }
 
+  public LayerManager getLayerManager() {
+    return layerManager;
+  }
+
+  public Vector getPowers() {
+    return powers;
+  }
+
   public void setWallLayer(TiledLayer wallLayer) {
     this.wallLayer = wallLayer;
   }
@@ -152,7 +160,7 @@ public abstract class Chapter extends State {
 
   public void addPower(Power p) {
     powers.addElement(p);
-    layerManager.insert(p, 0);
+    layerManager.insert(p, layerManager.getSize()-2);
   }
 
   protected void updateMainSprite(long dt, int keyState) {
@@ -172,14 +180,14 @@ public abstract class Chapter extends State {
     }
   }
 
-  protected void updatePowers(long dt) {
+  protected void updatePowers(long dt, int keyState) {
     Vector to_remove = new Vector();
 
     for (Enumeration e = powers.elements(); e.hasMoreElements();) {
       Power p = (Power)e.nextElement();
-      p.update(dt);
+      p.update(dt, keyState);
 
-      if (p.collidesWith(wallLayer, true))
+      if (p.collidesWith(wallLayer, true) && p.collidedWithWall())
         to_remove.addElement(p);
     }
 

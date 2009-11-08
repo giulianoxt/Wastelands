@@ -69,6 +69,10 @@ public class GameMidlet extends MIDlet implements Runnable {
     Display.getDisplay(this).setCurrent(display);
   }
 
+  public State getCurrentState() {
+    return state;
+  }
+
   public void run() {
     long last_time = getTime();
     long tick_time = 1000 / properties.Constants.FPS;

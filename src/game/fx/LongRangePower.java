@@ -30,13 +30,17 @@ public class LongRangePower extends Power {
     }
   }
 
-  public void update(long dt) {
+  public void update(long dt, int keyState) {
     int d = (int)(dt * Constants.POWER_VELOCITY);
     move(d * mov_x, d * mov_y);
   }
 
   public void collidedWith(Sprite p) {
     // tirar life
+  }
+
+  public boolean collidedWithWall() {
+    return true;
   }
 
   private int mov_x, mov_y;
