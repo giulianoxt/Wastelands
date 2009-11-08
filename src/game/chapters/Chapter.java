@@ -6,7 +6,6 @@ import game.attacks.AttackSensor;
 import game.base.Power;
 import util.Point;
 import game.base.State;
-import game.fx.LightSaberPower;
 import game.sprites.EnemySprite;
 import game.sprites.MainSprite;
 import java.io.IOException;
@@ -206,7 +205,6 @@ public abstract class Chapter extends State {
             to_remove.addElement(enemy);
         }
       }
-
     }
 
     for (Enumeration e = to_remove.elements(); e.hasMoreElements();) {

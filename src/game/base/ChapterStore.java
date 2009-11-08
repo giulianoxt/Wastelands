@@ -1,13 +1,13 @@
 package game.base;
 
-import game.chapters.Chapter;
+import java.util.Vector;
 import game.chapters.RobotFacilityAChapter;
 
 public class ChapterStore {
-  public static Chapter[] getStoredChapters() {
-    Chapter[] chapters = new Chapter[1];
+  public static Vector getStoredChapters() {
+    Vector chapters = new Vector(10);
 
-    chapters[0] = new RobotFacilityAChapter();
+    chapters.addElement(new RobotFacilityAChapter());
 
     return chapters;
   }

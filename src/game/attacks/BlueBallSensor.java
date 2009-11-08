@@ -3,7 +3,6 @@ package game.attacks;
 import game.chapters.Chapter;
 import game.fx.LongRangePower;
 import game.sprites.MainSprite;
-import javax.microedition.lcdui.game.GameCanvas;
 import properties.Constants;
 import util.Util;
 
@@ -11,20 +10,18 @@ public class BlueBallSensor extends AttackSensor {
   public BlueBallSensor() {
     state = 0;
     elapsed = 0;
-    b_pressed = d_pressed = false;
+    b_pressed = a_pressed = false;
   }
 
   public boolean update(long dt, int keyState) {
-    int bits = GameCanvas.GAME_B_PRESSED | GameCanvas.GAME_D_PRESSED;
-
     if (firePressed(keyState) ||
-        gameAPressed(keyState) ||
-        gameCPressed(keyState)) {
+        gameCPressed(keyState) ||
+        gameDPressed(keyState)) {
       state = 0;
       return false;
     }
 
-    boolean b_event = false, d_event = false;
+    boolean b_event = false, a_event = false;
 
     if (gameBPressed(keyState)) {
       if (!b_pressed) {
@@ -35,13 +32,13 @@ public class BlueBallSensor extends AttackSensor {
       b_pressed = false;
     }
 
-    if (gameDPressed(keyState)) {
-      if (!d_pressed) {
-        d_pressed = true;
-        d_event = true;
+    if (gameAPressed(keyState)) {
+      if (!a_pressed) {
+        a_pressed = true;
+        a_event = true;
       }
     } else {
-      d_pressed = false;
+      a_pressed = false;
     }
 
     elapsed += dt;
@@ -66,11 +63,11 @@ public class BlueBallSensor extends AttackSensor {
 
         break;
 
-      // esperando D
+      // esperando A
       case 2:
         if (elapsed > Constants.DOUBLE_PRESS_WINDOW) {
           state = 0;
-        } else if (d_event) {
+        } else if (a_event) {
           state = 0;
           return true;
         }
@@ -96,5 +93,5 @@ public class BlueBallSensor extends AttackSensor {
   private int state;
   private long elapsed;
 
-  private boolean b_pressed, d_pressed;
+  private boolean b_pressed, a_pressed;
 }

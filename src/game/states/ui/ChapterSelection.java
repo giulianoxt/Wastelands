@@ -4,6 +4,7 @@ import util.Util;
 import game.GameMidlet;
 import game.base.ChapterStore;
 import game.chapters.Chapter;
+import java.util.Vector;
 import javax.microedition.lcdui.*;
 
 public class ChapterSelection extends Form {
@@ -20,10 +21,10 @@ public class ChapterSelection extends Form {
     super("Chapter selection");
     instance = this;
 
-    Chapter[] chapters = ChapterStore.getStoredChapters();
+    Vector chapters = ChapterStore.getStoredChapters();
     
-    for (int i = 0; i < chapters.length; ++i) {
-      append(getChapterItem(chapters[i]));
+    for (int i = 0; i < chapters.size(); ++i) {
+      append(getChapterItem((Chapter)chapters.elementAt(i)));
     }
 
     addCommand(new Command("Back", Command.CANCEL, 2));

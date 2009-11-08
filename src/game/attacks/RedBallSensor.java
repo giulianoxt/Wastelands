@@ -3,7 +3,6 @@ package game.attacks;
 import game.chapters.Chapter;
 import game.fx.LongRangePower;
 import game.sprites.MainSprite;
-import javax.microedition.lcdui.game.GameCanvas;
 import properties.Constants;
 import util.Util;
 
@@ -15,8 +14,6 @@ public class RedBallSensor extends AttackSensor {
   }
 
   public boolean update(long dt, int keyState) {
-    int bits = GameCanvas.GAME_A_PRESSED | GameCanvas.GAME_C_PRESSED;
-
     if (firePressed(keyState) ||
         gameBPressed(keyState) ||
         gameDPressed(keyState)) {
