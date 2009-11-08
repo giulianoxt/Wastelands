@@ -5,10 +5,8 @@ package game;
  * and open the template in the editor.
  */
 
-import javax.microedition.midlet.*;
 import javax.microedition.lcdui.*;
 import javax.microedition.lcdui.game.*;
-import java.io.IOException;
 
 /**
  * @author Usuario
@@ -26,12 +24,12 @@ public class GameDesign {
   public int[] MenuItemAboutAnim = {0, 1};
   private Image robot_facility_tileset;
   private Image menu_exit;
-  private Image splash_wastelands;
   private Sprite MenuItemExit;
   public int MenuItemExitAnimDelay = 200;
   public int[] MenuItemExitAnim = {0, 1};
-  private Image robot_facility_tileset_4;
+  private Image splash_wastelands;
   private Image menu_play;
+  private Image robot_facility_tileset_4;
   private Sprite MenuItemPlay;
   public int MenuItemPlayAnimDelay = 200;
   public int[] MenuItemPlayAnim = {0, 1};
@@ -44,6 +42,16 @@ public class GameDesign {
   private Sprite MenuItemUpdate;
   public int MenuItemUpdateAnimDelay = 200;
   public int[] MenuItemUpdateAnim = {0, 1};
+  private Image guard_yellow;
+  private Sprite GuardYellow;
+  public int GuardYelloWalkRightDelay = 200;
+  public int[] GuardYelloWalkRight = {6, 7, 8};
+  public int GuardYellowWalkUpDelay = 200;
+  public int[] GuardYellowWalkUp = {9, 10, 11};
+  public int GuardYellowWalkDownDelay = 200;
+  public int[] GuardYellowWalkDown = {0, 1, 2};
+  public int GuardYellowWalkLeftDelay = 200;
+  public int[] GuardYellowWalkLeft = {3, 4, 5};
   private Image main;
   private Sprite MainSprite;
   public int MainWalkUpDelay = 160;
@@ -74,16 +82,10 @@ public class GameDesign {
   public int GuardPunkWalkDownDelay = 160;
   public int[] GuardPunkWalkDown = {0, 1, 2};
   private Image guard_punk;
-  private Image guard_yellow;
-  private Sprite GuardYellow;
-  public int GuardYellowWalkDownDelay = 200;
-  public int[] GuardYellowWalkDown = {0, 1, 2};
-  public int GuardYellowWalkLeftDelay = 200;
-  public int[] GuardYellowWalkLeft = {3, 4, 5};
-  public int GuardYelloWalkRightDelay = 200;
-  public int[] GuardYelloWalkRight = {6, 7, 8};
-  public int GuardYellowWalkUpDelay = 200;
-  public int[] GuardYellowWalkUp = {9, 10, 11};
+  private Image blue_ball;
+  private Sprite BlueBall;
+  public int BlueBallseq003Delay = 200;
+  public int[] BlueBallseq003 = {0};
   //</editor-fold>//GEN-END:|fields|0|
 
   //<editor-fold defaultstate="collapsed" desc=" Generated Methods ">//GEN-BEGIN:|methods|0|
@@ -393,6 +395,29 @@ public class GameDesign {
     return GuardYellow;
   }
 //GEN-END:|179-getter|2|
+
+  public Image getBlue_ball() throws java.io.IOException {//GEN-BEGIN:|184-getter|0|184-preInit
+    if (blue_ball == null) {//GEN-END:|184-getter|0|184-preInit
+      // write pre-init user code here
+      blue_ball = Image.createImage("/sprites/blue_ball.png");//GEN-BEGIN:|184-getter|1|184-postInit
+    }//GEN-END:|184-getter|1|184-postInit
+    // write post-init user code here
+    return this.blue_ball;//GEN-BEGIN:|184-getter|2|
+  }
+//GEN-END:|184-getter|2|
+
+
+
+  public Sprite getBlueBall() throws java.io.IOException {//GEN-BEGIN:|189-getter|0|189-preInit
+    if (BlueBall == null) {//GEN-END:|189-getter|0|189-preInit
+      // write pre-init user code here
+      BlueBall = new Sprite(getBlue_ball(), 42, 14);//GEN-BEGIN:|189-getter|1|189-postInit
+      BlueBall.setFrameSequence(BlueBallseq003);//GEN-END:|189-getter|1|189-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|189-getter|2|
+    return BlueBall;
+  }
+//GEN-END:|189-getter|2|
 
 
 

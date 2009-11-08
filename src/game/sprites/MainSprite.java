@@ -50,6 +50,20 @@ public class MainSprite extends Sprite {
     mana = _mana;
   }
 
+  public int getMovement() {
+    if (current == upSeq) {
+      return 0;
+    } else if (current == downSeq) {
+      return 1;
+    } else if (current == leftSeq) {
+      return 2;
+    } else if (current == rightSeq) {
+      return 3;
+    } else {
+      return -1;
+    }
+  }
+
   public void update(long dt, int keyState) {
     double dx = 0, dy = 0, d = dt * Constants.MAIN_VELOCITY;
 

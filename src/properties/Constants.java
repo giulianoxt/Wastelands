@@ -10,6 +10,7 @@ public final class Constants {
 
   public static final double MAIN_VELOCITY = 100 / (double)1000;
   public static final double ENEMY_VELOCITY = 85 / (double)1000;
+  public static final double POWER_VELOCITY = 200 / (double)1000;
 
   public static final int INITIAL_HP = 200;
   public static final int INITIAL_MANA = 300;

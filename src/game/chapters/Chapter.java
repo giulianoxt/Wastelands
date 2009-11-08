@@ -3,6 +3,7 @@ package game.chapters;
 import game.GameDesign;
 import game.GameMidlet;
 import game.attacks.AttackSensor;
+import game.base.Power;
 import util.Point;
 import game.base.State;
 import game.sprites.EnemySprite;
@@ -25,6 +26,8 @@ public abstract class Chapter extends State {
 
     hpSprite = new Sprite(Util.getImage("/sprites/bolt.png"));
     manaSprite = new Sprite(Util.getImage("/sprites/mana.png"));
+
+    powers = new Vector(5);
   }
 
   public String getId() {
@@ -37,6 +40,10 @@ public abstract class Chapter extends State {
 
   public Point getEndPoint() {
     return endPoint;
+  }
+
+  public MainSprite getMainSprite() {
+    return mainSprite;
   }
 
   public void setEndPoint(Point endPoint) {
@@ -143,6 +150,11 @@ public abstract class Chapter extends State {
     layerManager.append(wallLayer);
   }
 
+  public void addPower(Power p) {
+    powers.addElement(p);
+    layerManager.insert(p, 0);
+  }
+
   protected void updateMainSprite(long dt, int keyState) {
     Point old_pos = new Point(mainSprite.getX(), mainSprite.getY());
 
@@ -157,6 +169,24 @@ public abstract class Chapter extends State {
     for (int i = 0; i < enemies.length; ++i) {
       EnemySprite enemy = enemies[i];
       enemy.update(dt, wallLayer);
+    }
+  }
+
+  protected void updatePowers(long dt) {
+    Vector to_remove = new Vector();
+
+    for (Enumeration e = powers.elements(); e.hasMoreElements();) {
+      Power p = (Power)e.nextElement();
+      p.update(dt);
+
+      if (p.collidesWith(wallLayer, true))
+        to_remove.addElement(p);
+    }
+
+    for (Enumeration e = to_remove.elements(); e.hasMoreElements();) {
+      Power p = (Power)e.nextElement();
+      powers.removeElement(p);
+      layerManager.remove(p);
     }
   }
 
@@ -251,6 +281,7 @@ public abstract class Chapter extends State {
 
   protected MainSprite mainSprite;
   protected EnemySprite[] enemies;
+  protected Vector powers;
   protected LayerManager layerManager;
 
   protected AttackSensor[] attackSensors;
