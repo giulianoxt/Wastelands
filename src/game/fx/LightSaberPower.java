@@ -46,12 +46,9 @@ public class LightSaberPower extends Power {
     }
   }
 
-  public void collidedWith(Sprite p) {
-    if (p instanceof EnemySprite) {
-      EnemySprite enemy = (EnemySprite)p;
-      enemy.setHP(Math.max(enemy.getHP() - getDamage(), 0));
+  public void collidedWith(Sprite s) {
+    if (Util.hitEnemy(damage, s))
       remove();
-    }
   }
 
   public boolean collidedWithWall() {

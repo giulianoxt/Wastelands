@@ -11,6 +11,11 @@ public abstract class Power extends Sprite {
     damage = d;
   }
 
+  public Power(int d, Sprite s) {
+    super(s);
+    damage = d;
+  }
+
   public int getDamage() {
     return damage;
   }

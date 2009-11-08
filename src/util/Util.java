@@ -1,5 +1,7 @@
 package util;
 
+import game.sprites.EnemySprite;
+import game.sprites.MainSprite;
 import java.util.Hashtable;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,6 +27,26 @@ public class Util {
       return img;
     } catch (IOException e) {
       return null;
+    }
+  }
+
+  public static boolean hitMainSprite(int damage, Sprite s) {
+    if (s instanceof MainSprite) {
+      MainSprite main = (MainSprite)s;
+      main.setHP(Math.max(main.getHP() - damage, 0));
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public static boolean hitEnemy(int damage, Sprite s) {
+    if (s instanceof EnemySprite) {
+      EnemySprite enemy = (EnemySprite)s;
+      enemy.setHP(Math.max(enemy.getHP() - damage, 0));
+      return true;
+    } else {
+      return false;
     }
   }
 

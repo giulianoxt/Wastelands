@@ -16,9 +16,13 @@ public final class Constants {
   public static final int INITIAL_HP = 200;
   public static final int INITIAL_MANA = 300;
 
-  public static final int MAGE_ATTACK_DISTANCE2 = 100 * 100;
-  public static final long MAGE_ATTACK_DELAY = 2 * 1000;
   public static final int ENEMY_PURSUIT_DISTANCE2 = 150 * 150;
+
+  public static final int MAGE_ATTACK_DISTANCE2 = 100 * 100;
+  public static final long MAGE_ATTACK_DELAY = 1500;
+  
+  public static final long MINER_ATTACK_DELAY = 2 * 1000;
+  public static final long MINE_POWER_DURATION = 10 * 1000;
 
   public static final int HP_X = 0, HP_Y = 5;
   public static final int MANA_X = 0, MANA_Y = 35;

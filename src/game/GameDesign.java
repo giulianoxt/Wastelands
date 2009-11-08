@@ -24,12 +24,12 @@ public class GameDesign {
   public int[] MenuItemAboutAnim = {0, 1};
   private Image robot_facility_tileset;
   private Image menu_exit;
-  private Image splash_wastelands;
   private Sprite MenuItemExit;
   public int MenuItemExitAnimDelay = 200;
   public int[] MenuItemExitAnim = {0, 1};
-  private Image robot_facility_tileset_4;
+  private Image splash_wastelands;
   private Image menu_play;
+  private Image robot_facility_tileset_4;
   private Sprite MenuItemPlay;
   public int MenuItemPlayAnimDelay = 200;
   public int[] MenuItemPlayAnim = {0, 1};
@@ -43,6 +43,7 @@ public class GameDesign {
   public int MenuItemUpdateAnimDelay = 200;
   public int[] MenuItemUpdateAnim = {0, 1};
   private Image blue_ball;
+  private Image red_ball;
   private Sprite BlueBall;
   public int BlueBallseq003Delay = 200;
   public int[] BlueBallseq003 = {0};
@@ -56,6 +57,9 @@ public class GameDesign {
   public int[] GuardYellowWalkDown = {0, 1, 2};
   public int GuardYellowWalkLeftDelay = 200;
   public int[] GuardYellowWalkLeft = {3, 4, 5};
+  private Sprite RedBall;
+  public int RedBallseq001Delay = 200;
+  public int[] RedBallseq001 = {0, 0, 0, 0, 0};
   private Image main;
   private Sprite MainSprite;
   public int MainWalkUpDelay = 160;
@@ -86,10 +90,20 @@ public class GameDesign {
   public int GuardPunkWalkDownDelay = 160;
   public int[] GuardPunkWalkDown = {0, 1, 2};
   private Image guard_punk;
-  private Image red_ball;
-  private Sprite RedBall;
-  public int RedBallseq001Delay = 200;
-  public int[] RedBallseq001 = {0, 0, 0, 0, 0};
+  private Image guard_red;
+  private Sprite RedMage;
+  public int RedMageWalkDownDelay = 200;
+  public int[] RedMageWalkDown = {0, 1, 2};
+  public int RedMageWalkLeftDelay = 200;
+  public int[] RedMageWalkLeft = {3, 4, 5};
+  public int RedMageWalkRightDelay = 200;
+  public int[] RedMageWalkRight = {6, 7, 8};
+  public int RedMageWalkUpDelay = 200;
+  public int[] RedMageWalkUp = {9, 10, 11};
+  private Image topview_tiles;
+  private Sprite SpiderMine;
+  public int SpiderMineseq001Delay = 200;
+  public int[] SpiderMineseq001 = {80, 81, 82, 83, 84, 86, 86, 87};
   //</editor-fold>//GEN-END:|fields|0|
 
   //<editor-fold defaultstate="collapsed" desc=" Generated Methods ">//GEN-BEGIN:|methods|0|
@@ -302,7 +316,7 @@ public class GameDesign {
   public Image getRobot_facility_tileset() throws java.io.IOException {//GEN-BEGIN:|128-getter|0|128-preInit
     if (robot_facility_tileset == null) {//GEN-END:|128-getter|0|128-preInit
       // write pre-init user code here
-      robot_facility_tileset = Image.createImage("/sprites/robot_facility_tileset.png");//GEN-BEGIN:|128-getter|1|128-postInit
+      robot_facility_tileset = Image.createImage("/sprites/robot_facility_tileset_4.png");//GEN-BEGIN:|128-getter|1|128-postInit
     }//GEN-END:|128-getter|1|128-postInit
     // write post-init user code here
     return this.robot_facility_tileset;//GEN-BEGIN:|128-getter|2|
@@ -443,6 +457,48 @@ public class GameDesign {
     return RedBall;
   }
 //GEN-END:|192-getter|2|
+
+  public Image getGuard_red() throws java.io.IOException {//GEN-BEGIN:|194-getter|0|194-preInit
+    if (guard_red == null) {//GEN-END:|194-getter|0|194-preInit
+      // write pre-init user code here
+      guard_red = Image.createImage("/sprites/guard_red.png");//GEN-BEGIN:|194-getter|1|194-postInit
+    }//GEN-END:|194-getter|1|194-postInit
+    // write post-init user code here
+    return this.guard_red;//GEN-BEGIN:|194-getter|2|
+  }
+//GEN-END:|194-getter|2|
+
+  public Sprite getRedMage() throws java.io.IOException {//GEN-BEGIN:|195-getter|0|195-preInit
+    if (RedMage == null) {//GEN-END:|195-getter|0|195-preInit
+      // write pre-init user code here
+      RedMage = new Sprite(getGuard_red(), 32, 32);//GEN-BEGIN:|195-getter|1|195-postInit
+      RedMage.setFrameSequence(RedMageWalkDown);//GEN-END:|195-getter|1|195-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|195-getter|2|
+    return RedMage;
+  }
+//GEN-END:|195-getter|2|
+
+  public Image getTopview_tiles() throws java.io.IOException {//GEN-BEGIN:|200-getter|0|200-preInit
+    if (topview_tiles == null) {//GEN-END:|200-getter|0|200-preInit
+      // write pre-init user code here
+      topview_tiles = Image.createImage("/topview_tiles.png");//GEN-BEGIN:|200-getter|1|200-postInit
+    }//GEN-END:|200-getter|1|200-postInit
+    // write post-init user code here
+    return this.topview_tiles;//GEN-BEGIN:|200-getter|2|
+  }
+//GEN-END:|200-getter|2|
+
+  public Sprite getSpiderMine() throws java.io.IOException {//GEN-BEGIN:|201-getter|0|201-preInit
+    if (SpiderMine == null) {//GEN-END:|201-getter|0|201-preInit
+      // write pre-init user code here
+      SpiderMine = new Sprite(getTopview_tiles(), 16, 16);//GEN-BEGIN:|201-getter|1|201-postInit
+      SpiderMine.setFrameSequence(SpiderMineseq001);//GEN-END:|201-getter|1|201-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|201-getter|2|
+    return SpiderMine;
+  }
+//GEN-END:|201-getter|2|
 
 
 

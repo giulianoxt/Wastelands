@@ -1,10 +1,10 @@
 package game.fx;
 
+import util.Util;
 import game.base.Power;
-import game.sprites.EnemySprite;
-import javax.microedition.lcdui.game.Sprite;
 import properties.Constants;
 import javax.microedition.lcdui.Image;
+import javax.microedition.lcdui.game.Sprite;
 
 public class LongRangePower extends Power {
   public LongRangePower(int damage, Image image) {
@@ -36,12 +36,9 @@ public class LongRangePower extends Power {
     move(d * mov_x, d * mov_y);
   }
 
-  public void collidedWith(Sprite p) {
-    if (p instanceof EnemySprite) {
-      EnemySprite enemy = (EnemySprite)p;
-      enemy.setHP(Math.max(enemy.getHP() - getDamage(), 0));
+  public void collidedWith(Sprite s) {
+    if (Util.hitEnemy(damage, s))
       remove();
-    }
   }
 
   public boolean collidedWithWall() {

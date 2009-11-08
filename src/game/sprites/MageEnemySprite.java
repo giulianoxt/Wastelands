@@ -3,7 +3,6 @@ package game.sprites;
 import game.GameMidlet;
 import game.chapters.Chapter;
 import game.fx.EnemyLongRangePower;
-import game.fx.LongRangePower;
 import javax.microedition.lcdui.game.Sprite;
 import javax.microedition.lcdui.game.TiledLayer;
 import properties.Constants;
@@ -24,6 +23,7 @@ public class MageEnemySprite extends EnemySprite {
     int dist2 = Util.getDistance2(this, main);
 
     if (dist2 <= Constants.MAGE_ATTACK_DISTANCE2) {
+      if (elapsed == 0) elapsed = Constants.MAGE_ATTACK_DELAY;
       attackUpdate(dt, walls, main);
     } else if (dist2 <= Constants.ENEMY_PURSUIT_DISTANCE2) {
       elapsed = 0;
@@ -74,7 +74,7 @@ public class MageEnemySprite extends EnemySprite {
     if (elapsed < Constants.MAGE_ATTACK_DELAY)
       return;
     
-    elapsed = 0;
+    elapsed = 1;
 
     EnemyLongRangePower power = new EnemyLongRangePower(
       10, Util.getImage("/sprites/white_ball.png")
