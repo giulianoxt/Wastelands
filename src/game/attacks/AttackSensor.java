@@ -5,7 +5,9 @@ import javax.microedition.lcdui.game.GameCanvas;
 
 public abstract class AttackSensor {
   private static AttackSensor[] sensors = {
-    new LightSaber()
+    new RedBallSensor(),
+    new BlueBallSensor(),
+    new LightSaberSensor()
   };
 
   public static AttackSensor[] getAttackSensors() {
@@ -16,34 +18,42 @@ public abstract class AttackSensor {
   public abstract void run(Chapter c);
 
   public static boolean firePressed(int keyState) {
-    return keyPressed(keyState, GameCanvas.FIRE_PRESSED);
+    return pressed(keyState, GameCanvas.FIRE_PRESSED);
   }
 
   public static boolean leftPressed(int keyState) {
-    return keyPressed(keyState, GameCanvas.LEFT_PRESSED);
+    return pressed(keyState, GameCanvas.LEFT_PRESSED);
   }
 
   public static boolean rightPressed(int keyState) {
-    return keyPressed(keyState, GameCanvas.RIGHT_PRESSED);
+    return pressed(keyState, GameCanvas.RIGHT_PRESSED);
   }
 
   public static boolean upPressed(int keyState) {
-    return keyPressed(keyState, GameCanvas.UP_PRESSED);
+    return pressed(keyState, GameCanvas.UP_PRESSED);
   }
 
   public static boolean downPressed(int keyState) {
-    return keyPressed(keyState, GameCanvas.DOWN_PRESSED);
+    return pressed(keyState, GameCanvas.DOWN_PRESSED);
   }
 
   public static boolean gameAPressed(int keyState) {
-    return keyPressed(keyState, GameCanvas.GAME_A_PRESSED);
+    return pressed(keyState, GameCanvas.GAME_A_PRESSED);
   }
 
   public static boolean gameBPressed(int keyState) {
-    return keyPressed(keyState, GameCanvas.GAME_B_PRESSED);
+    return pressed(keyState, GameCanvas.GAME_B_PRESSED);
   }
 
-  public static boolean keyPressed(int keyState, int keyBit) {
+  public static boolean gameCPressed(int keyState) {
+    return pressed(keyState, GameCanvas.GAME_C_PRESSED);
+  }
+
+  public static boolean gameDPressed(int keyState) {
+    return pressed(keyState, GameCanvas.GAME_D_PRESSED);
+  }
+
+  private static boolean pressed(int keyState, int keyBit) {
     return (keyState & keyBit) != 0;
   }
 }

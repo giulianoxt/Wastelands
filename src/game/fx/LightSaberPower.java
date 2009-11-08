@@ -14,6 +14,8 @@ public class LightSaberPower extends Power {
   }
 
   public void setMovement(int movement) {
+    setTransform(TRANS_NONE);
+    
     switch (movement) {
       case 0:
         setTransform(TRANS_ROT270);
@@ -30,37 +32,16 @@ public class LightSaberPower extends Power {
   }
 
   public void update(long dt, int keyState) {
-    if (!AttackSensor.firePressed(keyState)) {
-      Chapter chapter = getCurrentChapter();
-      chapter.getLayerManager().remove(this);
-      chapter.getPowers().removeElement(this);
-    } else {
+    if (AttackSensor.firePressed(keyState)) {
       MainSprite main = getCurrentChapter().getMainSprite();
       int movement = main.getMovement();
 
       setMovement(movement);
-      int dx = 0, dy = 0;
-
-      switch (movement) {
-        case 0:
-          dx = main.getWidth() - getWidth() / 2 - 4;
-          dy = -(getHeight() - main.getHeight() / 2) + 6;
-          break;
-        case 1:
-          dx = 2;
-          dy = main.getHeight() / 2;
-          break;
-        case 2:
-          dx = -(getWidth() - 10) + 4;
-          dy = main.getHeight() / 2;
-          break;
-        case 3:
-          dx = main.getWidth() / 2 + 2;
-          dy = main.getHeight() / 2;
-          break;
-      }
-
-      setPosition(main.getX() + dx, main.getY() + dy);
+      Util.adjustPositionToMovement(this, main, movement);
+    } else {
+      Chapter chapter = getCurrentChapter();
+      chapter.getLayerManager().remove(this);
+      chapter.getPowers().removeElement(this);
     }
   }
 

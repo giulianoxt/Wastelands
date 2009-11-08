@@ -1,10 +1,12 @@
 package util;
 
+import game.sprites.MainSprite;
+import java.util.Hashtable;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Hashtable;
 import javax.microedition.lcdui.Image;
+import javax.microedition.lcdui.game.Sprite;
 
 public class Util {
   public static Image getImage(String filepath) {
@@ -19,6 +21,32 @@ public class Util {
     } catch (IOException e) {
       return null;
     }
+  }
+
+  public static void adjustPositionToMovement(
+      Sprite sprite, MainSprite main, int movement) {
+    int dx = 0, dy = 0;
+
+    switch (movement) {
+      case 0:
+        dx = main.getWidth() - sprite.getWidth() / 2 - 4;
+        dy = -(sprite.getHeight() - main.getHeight() / 2) + 6;
+        break;
+      case 1:
+        dx = 2;
+        dy = main.getHeight() / 2;
+        break;
+      case 2:
+        dx = -(sprite.getWidth() - 10) + 4;
+        dy = main.getHeight() / 2;
+        break;
+      case 3:
+        dx = main.getWidth() / 2 + 2;
+        dy = main.getHeight() / 2;
+        break;
+    }
+
+    sprite.setPosition(main.getX() + dx, main.getY() + dy);
   }
 
   public static Hashtable readPropertyFile(String chapterId) {
