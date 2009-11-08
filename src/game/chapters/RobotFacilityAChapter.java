@@ -1,11 +1,8 @@
 package game.chapters;
 
-import util.Point;
 import game.GameDesign;
 import game.GameMidlet;
-import game.sprites.MainSprite;
 import javax.microedition.lcdui.game.*;
-import properties.Constants;
 
 public class RobotFacilityAChapter extends Chapter {
   public RobotFacilityAChapter() {
@@ -23,14 +20,8 @@ public class RobotFacilityAChapter extends Chapter {
     }
 
     setWallLayer(walls);
-    setStartPoint(new Point(1, 6));
-    setEndPoint(new Point(21, 19));
-
-    mainSprite = new MainSprite(mainChar);
+    setMainChar(mainChar);
     setupChapter();
-
-    mainSprite.setHP(Constants.INITIAL_HP);
-    mainSprite.setMana(Constants.INITIAL_MANA);
   }
 
   public void update(long dt) {

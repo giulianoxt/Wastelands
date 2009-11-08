@@ -58,9 +58,23 @@ public abstract class Chapter extends State {
     this.wallLayer = wallLayer;
   }
 
-  protected void setupChapter() {
-    setupEnemies();
+  public void setMainChar(Sprite main) {
+    mainChar = main;
+  }
 
+  protected void setupChapter() {
+    setupMainSprite();
+    setupEnemies();
+    setupLayerManager();
+  }
+  
+  protected void setupMainSprite() {
+    mainSprite = new MainSprite(mainChar);
+    mainSprite.setHP(Constants.INITIAL_HP);
+    mainSprite.setMana(Constants.INITIAL_MANA);
+  }
+
+  protected void setupLayerManager() {
     layerManager = new LayerManager();
     layerManager.setViewWindow(
       0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT
@@ -223,5 +237,6 @@ public abstract class Chapter extends State {
   protected EnemySprite[] enemies;
   protected LayerManager layerManager;
 
+  protected Sprite mainChar;
   protected Sprite hpSprite, manaSprite;
 }
