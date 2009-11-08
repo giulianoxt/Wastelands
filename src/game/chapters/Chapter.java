@@ -15,6 +15,7 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
 import javax.microedition.lcdui.Graphics;
+import javax.microedition.lcdui.Image;
 import javax.microedition.lcdui.game.LayerManager;
 import javax.microedition.lcdui.game.Sprite;
 import javax.microedition.lcdui.game.TiledLayer;
@@ -30,6 +31,8 @@ public abstract class Chapter extends State {
     manaSprite = new Sprite(Util.getImage("/sprites/mana.png"));
 
     powers = new Vector(5);
+
+    interfaceImg = Util.getImage("/sprites/interface.png");
   }
 
   public String getId() {
@@ -293,16 +296,20 @@ public abstract class Chapter extends State {
 
     g.drawString(
       "" + mainSprite.getHP(),
-      hpSprite.getWidth() + 3,
-      hpSprite.getHeight() / 2 - 3,
+      Constants.HP_X + hpSprite.getWidth() + 3,
+      Constants.HP_Y + hpSprite.getHeight() / 2 - 8,
       Graphics.TOP | Graphics.LEFT
     );
 
     g.drawString(
       "" + mainSprite.getMana(),
-      manaSprite.getWidth() + 3,
+      manaSprite.getWidth(),
       Constants.MANA_Y + manaSprite.getHeight() / 2 - 8,
       Graphics.TOP | Graphics.LEFT
+    );
+
+    g.drawImage(
+      interfaceImg, 0, 0, Graphics.TOP | Graphics.LEFT
     );
   }
 
@@ -319,4 +326,6 @@ public abstract class Chapter extends State {
 
   protected Sprite mainChar;
   protected Sprite hpSprite, manaSprite;
+
+  protected Image interfaceImg;
 }

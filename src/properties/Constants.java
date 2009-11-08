@@ -23,7 +23,7 @@ public final class Constants {
   
   public static final long MINER_ATTACK_DELAY = 2 * 1000;
   public static final long MINE_POWER_DURATION = 10 * 1000;
-
-  public static final int HP_X = 0, HP_Y = 5;
-  public static final int MANA_X = 0, MANA_Y = 35;
+  
+  public static final int HP_X = -3, HP_Y = 12;
+  public static final int MANA_X = -3, MANA_Y = 40;
 }
