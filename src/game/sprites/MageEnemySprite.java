@@ -11,7 +11,7 @@ import util.Util;
 
 public class MageEnemySprite extends EnemySprite {
   public MageEnemySprite(Sprite sprite) {
-    super(sprite);
+    super(sprite, null, null, null, null);
 
     GameDesign design = GameMidlet.getDesignInstance();
 

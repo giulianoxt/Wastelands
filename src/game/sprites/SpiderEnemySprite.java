@@ -11,7 +11,7 @@ import util.Util;
 
 public class SpiderEnemySprite extends EnemySprite {
   public SpiderEnemySprite(Sprite sprite) {
-    super(sprite);
+    super(sprite, null, null, null, null);
 
     GameDesign design = GameMidlet.getDesignInstance();
 

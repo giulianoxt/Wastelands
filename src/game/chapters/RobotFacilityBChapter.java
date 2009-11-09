@@ -6,30 +6,21 @@ import game.dialogs.InitialDialog;
 import game.sprites.EnemySprite;
 import java.io.IOException;
 
-public class RobotFacilityAChapter extends Chapter {
-  public RobotFacilityAChapter() {
-    super("robot_facility_a", "Robot Facility A");
+public class RobotFacilityBChapter extends Chapter {
+  public RobotFacilityBChapter() {
+    super("robot_facility_b", "Robot Facility B");
 
     GameDesign design = GameMidlet.getDesignInstance();
 
     try {
       setMainChar(design.getRobotSprite());
-      setWallLayer(design.getRobotFacilityA());
+      setWallLayer(design.getRobotFacilityB());
       addDialogSensor(new InitialDialog(this));
-
-      girlSprite = new EnemySprite(
-        design.getGirlRobotSprite(),
-        design.GirlRobotWalkUp, design.GirlRobotWalkDown,
-        design.GirlRobotWalkLeft, design.GirlRobotWalkRight
-      );
-
-      enemies.addElement(girlSprite);
     } catch (IOException e) {
       e.printStackTrace();
     }
 
     setupChapter();
-    girlSprite.setPosition(50, 50);
   }
 
   public void update(long dt) {
@@ -42,6 +33,6 @@ public class RobotFacilityAChapter extends Chapter {
     updateDialogSensors(dt, keyState);
     updateViewWindow();
   }
-  
+
   private EnemySprite girlSprite;
 }

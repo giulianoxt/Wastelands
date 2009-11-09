@@ -8,16 +8,15 @@ import javax.microedition.lcdui.game.TiledLayer;
 import properties.Constants;
 
 public class EnemySprite extends Sprite {
-  public EnemySprite(Sprite sprite) {
+  public EnemySprite(Sprite sprite,
+          int[] up, int[] down, int[] left, int[] right) {
     super(sprite);
     setRefPixelPosition(0, 0);
 
-    GameDesign design = GameMidlet.getDesignInstance();
-
-    upSeq = design.GuardGreenWalkUp;
-    downSeq = design.GuardGreenWalkDown;
-    leftSeq = design.GuardGreenWalkLeft;
-    rightSeq = design.GuardGreenWalkRight;
+    upSeq = up;
+    downSeq = down;
+    leftSeq = left;
+    rightSeq = right;
 
     current = null;
     setAnimation(downSeq);

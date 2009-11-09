@@ -33,6 +33,7 @@ public abstract class Chapter extends State {
 
     powers = new Vector(5);
     dialogSensors = new Vector(5);
+    enemies = new Vector(10);
 
     interfaceImg = Util.getImage("/sprites/interface.png");
   }
@@ -111,7 +112,6 @@ public abstract class Chapter extends State {
     props.remove("start_pos");
     props.remove("end_pos");
 
-    enemies = new Vector(10);
     EnemySprite enemy = null;
     GameDesign design = GameMidlet.getDesignInstance();
 
@@ -142,6 +142,10 @@ public abstract class Chapter extends State {
 
       enemies.addElement(enemy);
     }
+  }
+
+  protected void addEnemy(EnemySprite enemy) {
+    enemies.addElement(enemy);
   }
 
   protected void setupSensors() {
