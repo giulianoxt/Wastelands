@@ -1,5 +1,6 @@
 package game.sprites;
 
+import game.GameDesign;
 import game.GameMidlet;
 import game.chapters.Chapter;
 import game.fx.SpiderMinePower;
@@ -11,6 +12,17 @@ import util.Util;
 public class SpiderEnemySprite extends EnemySprite {
   public SpiderEnemySprite(Sprite sprite) {
     super(sprite);
+
+    GameDesign design = GameMidlet.getDesignInstance();
+
+    upSeq = design.RobotGrayWalkUp;
+    downSeq = design.RobotGrayWalkDown;
+    leftSeq = design.RobotGrayWalkLeft;
+    rightSeq = design.RobotGrayWalkRight;
+
+    current = null;
+    setAnimation(downSeq);
+
     elapsed = 0;
   }
 

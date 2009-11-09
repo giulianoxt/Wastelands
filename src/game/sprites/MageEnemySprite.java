@@ -1,5 +1,6 @@
 package game.sprites;
 
+import game.GameDesign;
 import game.GameMidlet;
 import game.chapters.Chapter;
 import game.fx.EnemyLongRangePower;
@@ -11,6 +12,17 @@ import util.Util;
 public class MageEnemySprite extends EnemySprite {
   public MageEnemySprite(Sprite sprite) {
     super(sprite);
+
+    GameDesign design = GameMidlet.getDesignInstance();
+
+    upSeq = design.RobotLightWalkUp;
+    downSeq = design.RobotLightWalkDown;
+    leftSeq = design.RobotLightWalkLeft;
+    rightSeq = design.RobotLightWalkRight;
+
+    current = null;
+    setAnimation(downSeq);
+
     elapsed = 0;
   }
 
