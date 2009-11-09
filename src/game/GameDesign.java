@@ -343,15 +343,15 @@ public class GameDesign {
     }
 //GEN-END:|122-getter|2|
 
-  public Sprite getGuardPunk() throws java.io.IOException {//GEN-BEGIN:|123-getter|0|123-preInit
-      if (GuardPunk == null) {//GEN-END:|123-getter|0|123-preInit
+    public Sprite getGuardPunk() throws java.io.IOException {//GEN-BEGIN:|123-getter|0|123-preInit
+        if (GuardPunk == null) {//GEN-END:|123-getter|0|123-preInit
       // write pre-init user code here
-          GuardPunk = new Sprite(getGuard_punk(), 32, 32);//GEN-BEGIN:|123-getter|1|123-postInit
-          GuardPunk.setFrameSequence(GuardPunkWalkDown);//GEN-END:|123-getter|1|123-postInit
+            GuardPunk = new Sprite(getGuard_punk(), 32, 32);//GEN-BEGIN:|123-getter|1|123-postInit
+            GuardPunk.setFrameSequence(GuardPunkWalkDown);//GEN-END:|123-getter|1|123-postInit
       // write post-init user code here
-      }//GEN-BEGIN:|123-getter|2|
-      return GuardPunk;
-  }
+        }//GEN-BEGIN:|123-getter|2|
+        return GuardPunk;
+    }
 //GEN-END:|123-getter|2|
 
   public Image getRobot_facility_tileset() throws java.io.IOException {//GEN-BEGIN:|128-getter|0|128-preInit
@@ -633,23 +633,23 @@ public class GameDesign {
               { 4, 9, 4, 9, 4, 4, 4, 9, 4, 4, 4, 4, 4, 4, 4, 4, 4, 9, 4, 4 },
               { 4, 0, 4, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 4 },
               { 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 4, 0, 0, 0, 4, 0, 4, 0, 4 },
-              { 4, 0, 4, 9, 4, 0, 4, 4, 0, 0, 9, 4, 4, 0, 0, 0, 0, 4, 0, 4 },
+              { 4, 0, 4, 9, 4, 0, 4, 4, 0, 0, 9, 8, 4, 0, 0, 0, 0, 4, 0, 4 },
               { 4, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 4, 0, 0, 0, 4, 4, 4, 0, 4 },
               { 4, 0, 4, 4, 4, 0, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4 },
               { 4, 0, 0, 4, 0, 4, 0, 4, 0, 0, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4 },
               { 4, 9, 4, 9, 0, 4, 0, 4, 4, 9, 4, 0, 0, 4, 0, 4, 0, 4, 0, 4 },
-              { 4, 0, 0, 0, 0, 4, 0, 4, 0, 0, 9, 0, 0, 4, 4, 4, 0, 4, 0, 4 },
+              { 4, 0, 0, 0, 0, 4, 0, 4, 0, 0, 9, 0, 0, 4, 10, 4, 0, 4, 0, 4 },
               { 4, 0, 4, 4, 0, 9, 0, 4, 4, 0, 4, 0, 9, 4, 0, 4, 0, 4, 0, 4 },
-              { 4, 0, 4, 0, 0, 4, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 4, 0, 4 },
-              { 4, 0, 4, 0, 4, 9, 4, 4, 0, 4, 4, 9, 4, 4, 0, 4, 0, 4, 0, 4 },
-              { 4, 0, 4, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 4, 0, 4, 0, 4 },
-              { 4, 0, 4, 0, 0, 3, 0, 0, 4, 0, 0, 0, 0, 4, 0, 4, 0, 4, 0, 4 },
-              { 4, 0, 4, 0, 4, 4, 4, 4, 9, 0, 0, 4, 9, 4, 0, 4, 0, 9, 0, 4 },
+              { 4, 0, 4, 0, 0, 4, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 0, 10, 0, 4 },
+              { 4, 0, 4, 0, 4, 9, 10, 10, 0, 4, 4, 9, 4, 4, 0, 4, 0, 10, 0, 4 },
+              { 4, 0, 4, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 4, 0, 10, 0, 4 },
+              { 4, 0, 4, 0, 0, 3, 0, 0, 4, 0, 0, 0, 0, 4, 0, 4, 0, 10, 0, 4 },
+              { 4, 0, 4, 0, 4, 8, 4, 4, 9, 0, 0, 4, 9, 4, 0, 4, 0, 9, 0, 4 },
               { 4, 0, 4, 0, 0, 4, 9, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 4 },
               { 4, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 9, 4, 4, 4 },
               { 4, 0, 9, 4, 4, 4, 4, 4, 4, 9, 4, 4, 4, 0, 0, 0, 0, 0, 7, 4 },
-              { 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4 },
-              { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 }
+              { 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 8 },
+              { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 8, 8 }
           };//GEN-END:|227-getter|1|227-midInit
           // write mid-init user code here
           for (int row = 0; row < 20; row++) {//GEN-BEGIN:|227-getter|2|227-postInit
