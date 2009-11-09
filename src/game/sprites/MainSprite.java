@@ -13,10 +13,14 @@ public class MainSprite extends Sprite {
     setRefPixelPosition(0, 0);
 
     GameDesign design = GameMidlet.getDesignInstance();
-    upSeq = design.MainWalkUp;
+    /*upSeq = design.MainWalkUp;
     downSeq = design.MainWalkDown;
     leftSeq = design.MainWalkLeft;
-    rightSeq = design.MainWalkRight;
+    rightSeq = design.MainWalkRight;*/
+    upSeq = design.RobotWalkUp;
+    downSeq = design.RobotWalkDown;
+    leftSeq = design.RobotWalkLeft;
+    rightSeq = design.RobotWalkRight;
 
     current = null;
     setAnimation(downSeq);

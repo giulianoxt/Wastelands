@@ -24,12 +24,12 @@ public class GameDesign {
   public int[] MenuItemAboutAnim = {0, 1};
   private Image robot_facility_tileset;
   private Image menu_exit;
+  private Image splash_wastelands;
   private Sprite MenuItemExit;
   public int MenuItemExitAnimDelay = 200;
   public int[] MenuItemExitAnim = {0, 1};
-  private Image splash_wastelands;
-  private Image menu_play;
   private Image robot_facility_tileset_4;
+  private Image menu_play;
   private Sprite MenuItemPlay;
   public int MenuItemPlayAnimDelay = 200;
   public int[] MenuItemPlayAnim = {0, 1};
@@ -57,9 +57,23 @@ public class GameDesign {
   public int[] GuardYellowWalkDown = {0, 1, 2};
   public int GuardYellowWalkLeftDelay = 200;
   public int[] GuardYellowWalkLeft = {3, 4, 5};
+  private Sprite SpiderMine;
+  public int SpiderMineseq001Delay = 200;
+  public int[] SpiderMineseq001 = {80, 81, 82, 83, 84, 86, 86, 87};
+  private Image topview_tiles;
   private Sprite RedBall;
   public int RedBallseq001Delay = 200;
   public int[] RedBallseq001 = {0, 0, 0, 0, 0};
+  private Sprite RedMage;
+  public int RedMageWalkLeftDelay = 200;
+  public int[] RedMageWalkLeft = {3, 4, 5};
+  public int RedMageWalkDownDelay = 200;
+  public int[] RedMageWalkDown = {0, 1, 2};
+  public int RedMageWalkUpDelay = 200;
+  public int[] RedMageWalkUp = {9, 10, 11};
+  public int RedMageWalkRightDelay = 200;
+  public int[] RedMageWalkRight = {6, 7, 8};
+  private Image guard_red;
   private Image main;
   private Sprite MainSprite;
   public int MainWalkUpDelay = 160;
@@ -90,20 +104,16 @@ public class GameDesign {
   public int GuardPunkWalkDownDelay = 160;
   public int[] GuardPunkWalkDown = {0, 1, 2};
   private Image guard_punk;
-  private Image guard_red;
-  private Sprite RedMage;
-  public int RedMageWalkDownDelay = 200;
-  public int[] RedMageWalkDown = {0, 1, 2};
-  public int RedMageWalkLeftDelay = 200;
-  public int[] RedMageWalkLeft = {3, 4, 5};
-  public int RedMageWalkRightDelay = 200;
-  public int[] RedMageWalkRight = {6, 7, 8};
-  public int RedMageWalkUpDelay = 200;
-  public int[] RedMageWalkUp = {9, 10, 11};
-  private Image topview_tiles;
-  private Sprite SpiderMine;
-  public int SpiderMineseq001Delay = 200;
-  public int[] SpiderMineseq001 = {80, 81, 82, 83, 84, 86, 86, 87};
+  private Image robotsheet;
+  private Sprite RobotSprite;
+  public int RobotWalkDownDelay = 200;
+  public int[] RobotWalkDown = {0, 1, 2};
+  public int RobotWalkUpDelay = 200;
+  public int[] RobotWalkUp = {3, 4, 5};
+  public int RobotWalkLeftDelay = 200;
+  public int[] RobotWalkLeft = {6, 7, 8};
+  public int RobotWalkRightDelay = 200;
+  public int[] RobotWalkRight = {9, 10, 11};
   //</editor-fold>//GEN-END:|fields|0|
 
   //<editor-fold defaultstate="collapsed" desc=" Generated Methods ">//GEN-BEGIN:|methods|0|
@@ -499,6 +509,27 @@ public class GameDesign {
     return SpiderMine;
   }
 //GEN-END:|201-getter|2|
+
+  public Image getRobotsheet() throws java.io.IOException {//GEN-BEGIN:|203-getter|0|203-preInit
+    if (robotsheet == null) {//GEN-END:|203-getter|0|203-preInit
+      // write pre-init user code here
+      robotsheet = Image.createImage("/sprites/robotsheet.png");//GEN-BEGIN:|203-getter|1|203-postInit
+    }//GEN-END:|203-getter|1|203-postInit
+    // write post-init user code here
+    return this.robotsheet;//GEN-BEGIN:|203-getter|2|
+  }
+//GEN-END:|203-getter|2|
+
+  public Sprite getRobotSprite() throws java.io.IOException {//GEN-BEGIN:|204-getter|0|204-preInit
+    if (RobotSprite == null) {//GEN-END:|204-getter|0|204-preInit
+      // write pre-init user code here
+      RobotSprite = new Sprite(getRobotsheet(), 32, 32);//GEN-BEGIN:|204-getter|1|204-postInit
+      RobotSprite.setFrameSequence(RobotWalkDown);//GEN-END:|204-getter|1|204-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|204-getter|2|
+    return RobotSprite;
+  }
+//GEN-END:|204-getter|2|
 
 
 

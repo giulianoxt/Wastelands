@@ -13,7 +13,7 @@ public class RobotFacilityAChapter extends Chapter {
     GameDesign design = GameMidlet.getDesignInstance();
 
     try {
-      setMainChar(design.getMainSprite());
+      setMainChar(design.getRobotSprite());
       setWallLayer(design.getRobotFacilityA());
       addDialogSensor(new InitialDialog(this));
     } catch (IOException e) {
@@ -48,7 +48,7 @@ public class RobotFacilityAChapter extends Chapter {
 
       if (elapsed >= 1000) {
         done = true;
-        activate(new DialogBox("Where am I?", chapter));
+        activate(new DialogBox(chapter.getName(), chapter));
       }
     }
 
