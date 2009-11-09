@@ -2,6 +2,7 @@ package game.chapters;
 
 import game.GameDesign;
 import game.GameMidlet;
+import game.dialogs.EndLevelSensor;
 import game.dialogs.InitialDialog;
 import game.sprites.EnemySprite;
 import java.io.IOException;
@@ -30,6 +31,8 @@ public class RobotFacilityAChapter extends Chapter {
 
     setupChapter();
     girlSprite.setPosition(50, 50);
+
+    addDialogSensor(new EndLevelSensor(this));
   }
 
   public void update(long dt) {

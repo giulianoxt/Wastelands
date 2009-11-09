@@ -86,9 +86,9 @@ public class GameMidlet extends MIDlet implements Runnable {
         long dt = t1 - last_time;
 
         if (!paused)
-          state.update(dt);
+          if (state != null) state.update(dt);
 
-        state.draw();
+        if (state != null) state.draw();
 
         long t2 = getTime();
         long proc_time = t2 - t1;

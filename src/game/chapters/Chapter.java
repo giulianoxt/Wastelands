@@ -294,7 +294,7 @@ public abstract class Chapter extends State {
     );
   }
 
-  protected Point fromLayerToScene(Point p) {
+  public Point fromLayerToScene(Point p) {
     return new Point(
       p.getX() * wallLayer.getCellWidth(),
       p.getY() * wallLayer.getCellHeight()
