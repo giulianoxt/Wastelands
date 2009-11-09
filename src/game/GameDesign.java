@@ -114,6 +114,36 @@ public class GameDesign {
   public int[] RobotWalkLeft = {6, 7, 8};
   public int RobotWalkRightDelay = 200;
   public int[] RobotWalkRight = {9, 10, 11};
+  private Image robotgirlsheet;
+  private Sprite GirlRobotSprite;
+  public int GirlRobotWalkDownDelay = 200;
+  public int[] GirlRobotWalkDown = {0, 1, 2};
+  public int GirlRobotWalkUpDelay = 200;
+  public int[] GirlRobotWalkUp = {3, 4, 5};
+  public int GirlRobotWalkRightDelay = 200;
+  public int[] GirlRobotWalkRight = {6, 7, 8};
+  public int GirlRobotWalkLeftDelay = 200;
+  public int[] GirlRobotWalkLeft = {9, 10, 11};
+  private Image robotsheet_light;
+  private Sprite RobotLight;
+  public int RobotLightWalkDownDelay = 200;
+  public int[] RobotLightWalkDown = {0, 1, 2};
+  public int RobotLightWalkUpDelay = 200;
+  public int[] RobotLightWalkUp = {3, 4, 5};
+  public int RobotLightWalkLeftDelay = 200;
+  public int[] RobotLightWalkLeft = {6, 7, 8};
+  public int RobotLightWalkRightDelay = 200;
+  public int[] RobotLightWalkRight = {9, 10, 11};
+  private Image robotsheet_gray;
+  private Sprite RobotGray;
+  public int RobotGrayWalkDownDelay = 200;
+  public int[] RobotGrayWalkDown = {0, 1, 2};
+  public int RobotGrayWalkUpDelay = 200;
+  public int[] RobotGrayWalkUp = {3, 4, 5};
+  public int RobotGrayWalkLeftDelay = 200;
+  public int[] RobotGrayWalkLeft = {6, 7, 8};
+  public int RobotGrayWalkRightDelay = 200;
+  public int[] RobotGrayWalkRight = {9, 10, 11};
   //</editor-fold>//GEN-END:|fields|0|
 
   //<editor-fold defaultstate="collapsed" desc=" Generated Methods ">//GEN-BEGIN:|methods|0|
@@ -376,9 +406,9 @@ public class GameDesign {
         { 4, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 0, 3, 4 },
         { 4, 3, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4 },
         { 4, 3, 0, 3, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4 },
-        { 4, 3, 0, 3, 3, 9, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 9, 4, 3, 3, 3, 3, 4 },
-        { 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 4 },
-        { 4, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 }
+        { 4, 3, 0, 3, 3, 9, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 9, 4, 3, 3, 3, 1, 1 },
+        { 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 1 },
+        { 4, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1 }
       };//GEN-END:|134-getter|1|134-midInit
       // write mid-init user code here
       for (int row = 0; row < 21; row++) {//GEN-BEGIN:|134-getter|2|134-postInit
@@ -530,6 +560,69 @@ public class GameDesign {
     return RobotSprite;
   }
 //GEN-END:|204-getter|2|
+
+  public Image getRobotgirlsheet() throws java.io.IOException {//GEN-BEGIN:|209-getter|0|209-preInit
+    if (robotgirlsheet == null) {//GEN-END:|209-getter|0|209-preInit
+      // write pre-init user code here
+      robotgirlsheet = Image.createImage("/sprites/robotgirlsheet.png");//GEN-BEGIN:|209-getter|1|209-postInit
+    }//GEN-END:|209-getter|1|209-postInit
+    // write post-init user code here
+    return this.robotgirlsheet;//GEN-BEGIN:|209-getter|2|
+  }
+//GEN-END:|209-getter|2|
+
+  public Sprite getGirlRobotSprite() throws java.io.IOException {//GEN-BEGIN:|210-getter|0|210-preInit
+    if (GirlRobotSprite == null) {//GEN-END:|210-getter|0|210-preInit
+      // write pre-init user code here
+      GirlRobotSprite = new Sprite(getRobotgirlsheet(), 32, 32);//GEN-BEGIN:|210-getter|1|210-postInit
+      GirlRobotSprite.setFrameSequence(GirlRobotWalkDown);//GEN-END:|210-getter|1|210-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|210-getter|2|
+    return GirlRobotSprite;
+  }
+//GEN-END:|210-getter|2|
+
+  public Image getRobotsheet_light() throws java.io.IOException {//GEN-BEGIN:|215-getter|0|215-preInit
+    if (robotsheet_light == null) {//GEN-END:|215-getter|0|215-preInit
+      // write pre-init user code here
+      robotsheet_light = Image.createImage("/sprites/robotsheet_light.png");//GEN-BEGIN:|215-getter|1|215-postInit
+    }//GEN-END:|215-getter|1|215-postInit
+    // write post-init user code here
+    return this.robotsheet_light;//GEN-BEGIN:|215-getter|2|
+  }
+//GEN-END:|215-getter|2|
+
+  public Sprite getRobotLight() throws java.io.IOException {//GEN-BEGIN:|216-getter|0|216-preInit
+    if (RobotLight == null) {//GEN-END:|216-getter|0|216-preInit
+      // write pre-init user code here
+      RobotLight = new Sprite(getRobotsheet_light(), 32, 32);//GEN-BEGIN:|216-getter|1|216-postInit
+      RobotLight.setFrameSequence(RobotLightWalkDown);//GEN-END:|216-getter|1|216-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|216-getter|2|
+    return RobotLight;
+  }
+//GEN-END:|216-getter|2|
+
+  public Image getRobotsheet_gray() throws java.io.IOException {//GEN-BEGIN:|221-getter|0|221-preInit
+    if (robotsheet_gray == null) {//GEN-END:|221-getter|0|221-preInit
+      // write pre-init user code here
+      robotsheet_gray = Image.createImage("/sprites/robotsheet_gray.png");//GEN-BEGIN:|221-getter|1|221-postInit
+    }//GEN-END:|221-getter|1|221-postInit
+    // write post-init user code here
+    return this.robotsheet_gray;//GEN-BEGIN:|221-getter|2|
+  }
+//GEN-END:|221-getter|2|
+
+  public Sprite getRobotGray() throws java.io.IOException {//GEN-BEGIN:|222-getter|0|222-preInit
+    if (RobotGray == null) {//GEN-END:|222-getter|0|222-preInit
+      // write pre-init user code here
+      RobotGray = new Sprite(getRobotsheet_gray(), 32, 32);//GEN-BEGIN:|222-getter|1|222-postInit
+      RobotGray.setFrameSequence(RobotGrayWalkDown);//GEN-END:|222-getter|1|222-postInit
+      // write post-init user code here
+    }//GEN-BEGIN:|222-getter|2|
+    return RobotGray;
+  }
+//GEN-END:|222-getter|2|
 
 
 
