@@ -2,35 +2,42 @@ package game.fx;
 
 import java.io.InputStream;
 import javax.microedition.media.*;
-import javax.microedition.media.control.VolumeControl;
+import javax.microedition.media.control.*;
 
 public class Sound {
-  private static Player background = null;
+  private static Player background;
 
-  public static void playLoop(String filename) {
-    stopLoop();
+  static {
+    background = createPlayer("dark1.mid", "audio/midi");
+    background.setLoopCount(-1);
+  }
 
+  private static Player createPlayer(String filename, String type) {
     try {
       filename = "/songs/" + filename;
-      String type = "audio/midi";
 
-      System.out.println("filename = " + filename);
       InputStream input = Sound.class.getResourceAsStream(filename);
-      background = Manager.createPlayer(input, type);
-      background.prefetch();
+      Player p = Manager.createPlayer(input, type);
+      p.prefetch();
 
-      Control[] controls = background.getControls();
+      Control[] controls = p.getControls();
       for (int i = 0; i < controls.length; ++i) {
         Control c = controls[i];
         if (c instanceof VolumeControl) {
-          ((VolumeControl)c).setLevel(20);
+          ((VolumeControl)c).setLevel(4);
           break;
         }
       }
 
-      background.setLoopCount(-1);      
-      background.start();
+      return p;
     } catch (Exception e) { }
+
+    return null;
+  }
+
+  public static void playLoop(String filename) {
+    stopLoop();
+    try { background.start(); } catch (Exception e) { }
   }
 
   public static void stopLoop() {

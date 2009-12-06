@@ -2,6 +2,7 @@ package game.attacks;
 
 import game.chapters.Chapter;
 import game.fx.LongRangePower;
+import game.fx.Sound;
 import game.sprites.MainSprite;
 import properties.Constants;
 import util.Util;
@@ -69,6 +70,7 @@ public class RedBallSensor extends AttackSensor {
           state = 0;
         } else if (c_event) {
           state = 0;
+          
           return true;
         }
     }

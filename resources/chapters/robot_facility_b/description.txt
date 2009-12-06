@@ -1,6 +1,8 @@
 start_pos = (1, 1)
 end_pos = (17, 18)
 
+sound = psyko1.mid
+
 #GuardYellow1 = (5, 18)
 #GuardYellow2 = (12, 9)
 
