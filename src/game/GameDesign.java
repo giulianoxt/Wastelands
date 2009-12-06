@@ -554,46 +554,46 @@ public class GameDesign {
     }
 //GEN-END:|203-getter|2|
 
-  public Sprite getRobotSprite() throws java.io.IOException {//GEN-BEGIN:|204-getter|0|204-preInit
-      if (RobotSprite == null) {//GEN-END:|204-getter|0|204-preInit
+    public Sprite getRobotSprite() throws java.io.IOException {//GEN-BEGIN:|204-getter|0|204-preInit
+        if (RobotSprite == null) {//GEN-END:|204-getter|0|204-preInit
       // write pre-init user code here
-          RobotSprite = new Sprite(getRobotsheet(), 32, 32);//GEN-BEGIN:|204-getter|1|204-postInit
-          RobotSprite.setFrameSequence(RobotWalkDown);//GEN-END:|204-getter|1|204-postInit
+            RobotSprite = new Sprite(getRobotsheet(), 32, 32);//GEN-BEGIN:|204-getter|1|204-postInit
+            RobotSprite.setFrameSequence(RobotWalkDown);//GEN-END:|204-getter|1|204-postInit
       // write post-init user code here
-      }//GEN-BEGIN:|204-getter|2|
-      return RobotSprite;
-  }
+        }//GEN-BEGIN:|204-getter|2|
+        return RobotSprite;
+    }
 //GEN-END:|204-getter|2|
 
-  public Image getRobotgirlsheet() throws java.io.IOException {//GEN-BEGIN:|209-getter|0|209-preInit
-      if (robotgirlsheet == null) {//GEN-END:|209-getter|0|209-preInit
+    public Image getRobotgirlsheet() throws java.io.IOException {//GEN-BEGIN:|209-getter|0|209-preInit
+        if (robotgirlsheet == null) {//GEN-END:|209-getter|0|209-preInit
       // write pre-init user code here
-          robotgirlsheet = Image.createImage("/sprites/robotgirlsheet.png");//GEN-BEGIN:|209-getter|1|209-postInit
-      }//GEN-END:|209-getter|1|209-postInit
+            robotgirlsheet = Image.createImage("/sprites/robotgirlsheet.png");//GEN-BEGIN:|209-getter|1|209-postInit
+        }//GEN-END:|209-getter|1|209-postInit
     // write post-init user code here
-      return this.robotgirlsheet;//GEN-BEGIN:|209-getter|2|
-  }
+        return this.robotgirlsheet;//GEN-BEGIN:|209-getter|2|
+    }
 //GEN-END:|209-getter|2|
 
-  public Sprite getGirlRobotSprite() throws java.io.IOException {//GEN-BEGIN:|210-getter|0|210-preInit
-      if (GirlRobotSprite == null) {//GEN-END:|210-getter|0|210-preInit
+    public Sprite getGirlRobotSprite() throws java.io.IOException {//GEN-BEGIN:|210-getter|0|210-preInit
+        if (GirlRobotSprite == null) {//GEN-END:|210-getter|0|210-preInit
       // write pre-init user code here
-          GirlRobotSprite = new Sprite(getRobotgirlsheet(), 32, 32);//GEN-BEGIN:|210-getter|1|210-postInit
-          GirlRobotSprite.setFrameSequence(GirlRobotWalkDown);//GEN-END:|210-getter|1|210-postInit
+            GirlRobotSprite = new Sprite(getRobotgirlsheet(), 32, 32);//GEN-BEGIN:|210-getter|1|210-postInit
+            GirlRobotSprite.setFrameSequence(GirlRobotWalkDown);//GEN-END:|210-getter|1|210-postInit
       // write post-init user code here
-      }//GEN-BEGIN:|210-getter|2|
-      return GirlRobotSprite;
-  }
+        }//GEN-BEGIN:|210-getter|2|
+        return GirlRobotSprite;
+    }
 //GEN-END:|210-getter|2|
 
-  public Image getRobotsheet_light() throws java.io.IOException {//GEN-BEGIN:|215-getter|0|215-preInit
-      if (robotsheet_light == null) {//GEN-END:|215-getter|0|215-preInit
+    public Image getRobotsheet_light() throws java.io.IOException {//GEN-BEGIN:|215-getter|0|215-preInit
+        if (robotsheet_light == null) {//GEN-END:|215-getter|0|215-preInit
       // write pre-init user code here
-          robotsheet_light = Image.createImage("/sprites/robotsheet_light.png");//GEN-BEGIN:|215-getter|1|215-postInit
-      }//GEN-END:|215-getter|1|215-postInit
+            robotsheet_light = Image.createImage("/sprites/robotsheet_light.png");//GEN-BEGIN:|215-getter|1|215-postInit
+        }//GEN-END:|215-getter|1|215-postInit
     // write post-init user code here
-      return this.robotsheet_light;//GEN-BEGIN:|215-getter|2|
-  }
+        return this.robotsheet_light;//GEN-BEGIN:|215-getter|2|
+    }
 //GEN-END:|215-getter|2|
 
   public Sprite getRobotLight() throws java.io.IOException {//GEN-BEGIN:|216-getter|0|216-preInit
@@ -686,18 +686,18 @@ public class GameDesign {
           RobotFacility1 = new TiledLayer(40, 40, getModern_21(), 16, 16);//GEN-BEGIN:|231-getter|1|231-midInit
           int[][] tiles = {
               { 157, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 159 },
-              { 187, 191, 133, 223, 224, 225, 226, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 136, 188, 189 },
-              { 187, 189, 163, 253, 254, 255, 256, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 166, 187, 189 },
-              { 187, 189, 193, 283, 284, 285, 286, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 196, 187, 189 },
-              { 187, 189, 243, 243, 244, 244, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
-              { 187, 189, 243, 243, 244, 244, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
-              { 187, 189, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
-              { 187, 189, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
-              { 187, 189, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
-              { 187, 189, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
-              { 187, 189, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
-              { 187, 189, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
-              { 187, 189, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
+              { 187, 191, 133, 223, 224, 225, 226, 136, 190, 192, 313, 314, 315, 316, 317, 133, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 136, 188, 189 },
+              { 187, 189, 163, 253, 254, 255, 256, 166, 190, 192, 343, 344, 345, 346, 347, 163, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 164, 166, 187, 189 },
+              { 187, 189, 193, 283, 284, 285, 286, 196, 190, 192, 373, 374, 375, 376, 377, 193, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 194, 196, 187, 189 },
+              { 187, 189, 244, 244, 244, 244, 244, 244, 190, 192, 244, 243, 243, 243, 244, 244, 244, 244, 244, 244, 244, 244, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
+              { 187, 189, 244, 244, 244, 244, 244, 244, 190, 192, 243, 243, 243, 243, 244, 244, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
+              { 187, 189, 243, 243, 243, 243, 243, 243, 190, 192, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
+              { 187, 189, 243, 243, 160, 161, 161, 161, 188, 192, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
+              { 187, 189, 243, 243, 133, 38, 38, 38, 38, 136, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
+              { 187, 189, 243, 243, 163, 68, 164, 164, 164, 166, 137, 138, 243, 197, 198, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
+              { 187, 189, 243, 243, 193, 194, 194, 194, 194, 196, 167, 168, 243, 227, 228, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
+              { 187, 189, 243, 243, 244, 244, 244, 244, 244, 244, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
+              { 187, 189, 243, 243, 244, 244, 244, 244, 244, 244, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
               { 187, 189, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
               { 187, 189, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
               { 187, 189, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 187, 189 },
