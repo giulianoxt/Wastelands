@@ -2,6 +2,7 @@ package game.dialogs;
 
 import game.GameMidlet;
 import game.chapters.Chapter;
+import game.fx.Sound;
 import game.sprites.MainSprite;
 import game.states.ui.ChapterSelection;
 import javax.microedition.lcdui.Image;
@@ -22,10 +23,13 @@ public class EndLevelSensor extends DialogSensor {
   public void update(long dt, int keyState) {
     MainSprite sprite = chapter.getMainSprite();
 
-    if (sprite.collidesWith(endDoor, false) || sprite.getHP() == 0)
+    if (sprite.collidesWith(endDoor, false) || sprite.getHP() == 0) {
+      Sound.stopLoop();
+      
       GameMidlet.getInstance().gotoDisplayable(
         ChapterSelection.getInstance()
       );
+    }
   }
 
   private Sprite endDoor;

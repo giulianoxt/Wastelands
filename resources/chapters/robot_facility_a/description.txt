@@ -1,6 +1,8 @@
 start_pos = (1, 6)
 end_pos = (21, 19)
 
+sound = dark1.mid
+
 #GuardYellow1 = (9, 3)
 #GuardYellow2 = (17, 2)
 

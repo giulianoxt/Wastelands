@@ -7,6 +7,7 @@ import game.base.Power;
 import util.Point;
 import game.base.State;
 import game.dialogs.DialogSensor;
+import game.fx.Sound;
 import game.sprites.EnemySprite;
 import game.sprites.MageEnemySprite;
 import game.sprites.MainSprite;
@@ -36,6 +37,8 @@ public abstract class Chapter extends State {
     enemies = new Vector(10);
 
     interfaceImg = Util.getImage("/sprites/interface.png");
+
+    firstUpdate = true;
   }
 
   public String getId() {
@@ -108,6 +111,13 @@ public abstract class Chapter extends State {
 
     setStartPoint(Util.readTuple((String)props.get("start_pos")));
     setEndPoint(Util.readTuple((String)props.get("end_pos")));
+
+    if (props.containsKey("sound")) {
+      loopSound = (String)props.get("sound");
+      props.remove("sound");
+    } else {
+      loopSound = null;
+    }
 
     props.remove("start_pos");
     props.remove("end_pos");
@@ -250,6 +260,11 @@ public abstract class Chapter extends State {
   }
 
   protected void updateViewWindow() {
+    if (firstUpdate) {
+      firstUpdate = false;
+      Sound.playLoop(loopSound);
+    }
+
     int view_w = Constants.SCREEN_WIDTH;
     int view_h = Constants.SCREEN_HEIGHT;
     int view_w2 = view_w / 2, view_h2 = view_h / 2;
@@ -343,4 +358,8 @@ public abstract class Chapter extends State {
   protected Sprite hpSprite, manaSprite;
 
   protected Image interfaceImg;
+
+  protected String loopSound;
+
+  protected boolean firstUpdate;
 }
