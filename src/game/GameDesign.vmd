@@ -52,23 +52,6 @@
                 <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vmenu_background"/>
                 <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/menu_background.png"/>
             </Component>
-            <Component componentID="140" typeID="Corg.netbeans.modules.vmd.game.model.Sprite">
-                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VMenuBackground"/>
-                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R2"/>
-                <Property name="layercd.prop.tile.width" typeID="Pint" value="V240"/>
-                <Property name="layercd.prop.tile.height" typeID="Pint" value="V310"/>
-                <Property name="sequencecontainer.prop.defaultsequence" typeID="Corg.netbeans.modules.vmd.game.model.Sequence" value="R141"/>
-                <Property name="sequencecontainer.prop.sequences" typeID="1Corg.netbeans.modules.vmd.game.model.Sequence" value="A1:4_R141"/>
-                <Component componentID="141" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R2"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VMenuBackgroundseq001"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V200"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V5,0,0,0,0,0,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V240"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V310"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-            </Component>
             <Component componentID="6" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
                 <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vmenu_about"/>
                 <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/menu_about.png"/>
@@ -90,17 +73,9 @@
                     <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
                 </Component>
             </Component>
-            <Component componentID="128" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
-                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vrobot_facility_tileset"/>
-                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/robot_facility_tileset_4.png"/>
-            </Component>
             <Component componentID="10" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
                 <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vmenu_exit"/>
                 <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/menu_exit.png"/>
-            </Component>
-            <Component componentID="130" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
-                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vsplash_wastelands"/>
-                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/splash_wastelands.png"/>
             </Component>
             <Component componentID="11" typeID="Corg.netbeans.modules.vmd.game.model.Sprite">
                 <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VMenuItemExit"/>
@@ -118,10 +93,6 @@
                     <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V50"/>
                     <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
                 </Component>
-            </Component>
-            <Component componentID="132" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
-                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vrobot_facility_tileset_4"/>
-                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/robot_facility_tileset_4.png"/>
             </Component>
             <Component componentID="13" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
                 <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vmenu_play"/>
@@ -143,13 +114,6 @@
                     <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V50"/>
                     <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
                 </Component>
-            </Component>
-            <Component componentID="134" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
-                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VRobotFacilityA"/>
-                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R132"/>
-                <Property name="layercd.prop.tile.width" typeID="Pint" value="V48"/>
-                <Property name="layercd.prop.tile.height" typeID="Pint" value="V48"/>
-                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V21,23,4,9,4,4,9,4,4,4,4,4,4,4,4,4,4,4,4,9,4,4,4,4,4,4,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,3,3,4,4,0,0,0,4,4,4,4,0,0,3,0,0,0,0,0,0,0,0,0,3,3,4,4,0,0,0,4,8,8,4,0,0,0,0,0,0,0,0,0,0,0,0,3,3,4,4,0,0,0,4,8,8,4,0,0,3,3,3,3,3,3,3,3,3,3,3,3,4,4,0,0,0,4,8,8,4,0,0,3,3,3,3,3,9,3,3,3,3,3,3,4,4,0,3,3,3,9,4,4,0,0,0,0,0,0,0,0,0,0,3,3,3,3,4,4,3,0,0,0,0,3,3,0,0,0,0,0,0,0,0,0,0,3,3,3,3,4,4,3,0,0,0,0,3,3,10,10,10,10,10,10,10,10,0,0,3,3,3,3,4,4,3,0,0,0,0,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,3,4,4,3,0,0,0,0,3,3,0,0,3,3,3,3,0,0,0,0,0,0,0,3,4,4,0,0,0,0,0,3,3,0,0,3,3,3,3,0,0,0,0,0,3,0,3,4,4,0,0,0,0,0,3,3,3,3,3,0,0,0,0,0,0,0,0,3,0,3,4,4,0,3,3,3,9,3,3,3,3,3,0,3,3,9,3,3,3,3,3,0,3,4,4,0,0,0,0,0,0,0,3,3,3,0,3,0,0,0,0,3,3,3,0,3,4,4,3,0,3,0,0,0,0,3,3,3,0,3,0,0,0,0,3,3,3,0,3,4,4,3,0,3,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,3,4,4,3,0,3,0,0,0,0,3,3,3,3,3,0,0,0,0,0,0,0,0,3,4,4,3,0,3,3,9,3,3,3,3,3,3,3,4,4,4,9,4,3,3,3,1,1,4,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,1,4,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,1"/>
             </Component>
             <Component componentID="17" typeID="Corg.netbeans.modules.vmd.game.model.Sprite">
                 <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VMenuItemScores"/>
@@ -192,6 +156,186 @@
                     <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V50"/>
                     <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
                 </Component>
+            </Component>
+            <Component componentID="110" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
+                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vmain"/>
+                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/main.png"/>
+            </Component>
+            <Component componentID="111" typeID="Corg.netbeans.modules.vmd.game.model.Sprite">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VMainSprite"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R110"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V32"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V32"/>
+                <Property name="sequencecontainer.prop.defaultsequence" typeID="Corg.netbeans.modules.vmd.game.model.Sequence" value="R112"/>
+                <Property name="sequencecontainer.prop.sequences" typeID="1Corg.netbeans.modules.vmd.game.model.Sequence" value="A4:4_R1124_R1134_R1144_R115"/>
+                <Component componentID="115" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R110"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VMainWalkUp"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,9,10,11,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+                <Component componentID="114" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R110"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VMainWalkRight"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,6,7,8,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+                <Component componentID="113" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R110"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VMainWalkLeft"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,3,4,5,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+                <Component componentID="112" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R110"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VMainWalkDown"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,0,1,2,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+            </Component>
+            <Component componentID="117" typeID="Corg.netbeans.modules.vmd.game.model.Sprite">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VGuardGreen"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R116"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V32"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V32"/>
+                <Property name="sequencecontainer.prop.defaultsequence" typeID="Corg.netbeans.modules.vmd.game.model.Sequence" value="R118"/>
+                <Property name="sequencecontainer.prop.sequences" typeID="1Corg.netbeans.modules.vmd.game.model.Sequence" value="A4:4_R1184_R1194_R1204_R121"/>
+                <Component componentID="119" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R116"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardGreenWalkLeft"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,3,4,5,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+                <Component componentID="118" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R116"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardGreenWalkDown"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,0,1,2,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+                <Component componentID="121" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R116"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardGreenWalkUp"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,9,10,11,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+                <Component componentID="120" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R116"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardGreenWalkRight"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,6,7,8,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+            </Component>
+            <Component componentID="116" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
+                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vguard_green"/>
+                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/guard_green.png"/>
+            </Component>
+            <Component componentID="123" typeID="Corg.netbeans.modules.vmd.game.model.Sprite">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VGuardPunk"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R122"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V32"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V32"/>
+                <Property name="sequencecontainer.prop.defaultsequence" typeID="Corg.netbeans.modules.vmd.game.model.Sequence" value="R124"/>
+                <Property name="sequencecontainer.prop.sequences" typeID="1Corg.netbeans.modules.vmd.game.model.Sequence" value="A4:4_R1244_R1254_R1264_R127"/>
+                <Component componentID="127" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R122"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardPunkWalkUp"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,9,10,11,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+                <Component componentID="126" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R122"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardPunkWalkRight"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,6,7,8,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+                <Component componentID="125" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R122"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardPunkWalkLeft"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,3,4,5,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+                <Component componentID="124" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R122"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardPunkWalkDown"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,0,1,2,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+            </Component>
+            <Component componentID="122" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
+                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vguard_punk"/>
+                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/guard_punk.png"/>
+            </Component>
+            <Component componentID="140" typeID="Corg.netbeans.modules.vmd.game.model.Sprite">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VMenuBackground"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R2"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V240"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V310"/>
+                <Property name="sequencecontainer.prop.defaultsequence" typeID="Corg.netbeans.modules.vmd.game.model.Sequence" value="R141"/>
+                <Property name="sequencecontainer.prop.sequences" typeID="1Corg.netbeans.modules.vmd.game.model.Sequence" value="A1:4_R141"/>
+                <Component componentID="141" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R2"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VMenuBackgroundseq001"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V200"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V5,0,0,0,0,0,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V240"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V310"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+            </Component>
+            <Component componentID="128" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
+                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vrobot_facility_tileset"/>
+                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/robot_facility_tileset_4.png"/>
+            </Component>
+            <Component componentID="130" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
+                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vsplash_wastelands"/>
+                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/splash_wastelands.png"/>
+            </Component>
+            <Component componentID="132" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
+                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vrobot_facility_tileset_4"/>
+                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/robot_facility_tileset_4.png"/>
+            </Component>
+            <Component componentID="134" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VRobotFacilityA"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R132"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V48"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V48"/>
+                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V21,23,4,9,4,4,9,4,4,4,4,4,4,4,4,4,4,4,4,9,4,4,4,4,4,4,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,3,3,4,4,0,0,0,4,4,4,4,0,0,3,0,0,0,0,0,0,0,0,0,3,3,4,4,0,0,0,4,8,8,4,0,0,0,0,0,0,0,0,0,0,0,0,3,3,4,4,0,0,0,4,8,8,4,0,0,3,3,3,3,3,3,3,3,3,3,3,3,4,4,0,0,0,4,8,8,4,0,0,3,3,3,3,3,9,3,3,3,3,3,3,4,4,0,3,3,3,9,4,4,0,0,0,0,0,0,0,0,0,0,3,3,3,3,4,4,3,0,0,0,0,3,3,0,0,0,0,0,0,0,0,0,0,3,3,3,3,4,4,3,0,0,0,0,3,3,10,10,10,10,10,10,10,10,0,0,3,3,3,3,4,4,3,0,0,0,0,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,3,4,4,3,0,0,0,0,3,3,0,0,3,3,3,3,0,0,0,0,0,0,0,3,4,4,0,0,0,0,0,3,3,0,0,3,3,3,3,0,0,0,0,0,3,0,3,4,4,0,0,0,0,0,3,3,3,3,3,0,0,0,0,0,0,0,0,3,0,3,4,4,0,3,3,3,9,3,3,3,3,3,0,3,3,9,3,3,3,3,3,0,3,4,4,0,0,0,0,0,0,0,3,3,3,0,3,0,0,0,0,3,3,3,0,3,4,4,3,0,3,0,0,0,0,3,3,3,0,3,0,0,0,0,3,3,3,0,3,4,4,3,0,3,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,3,4,4,3,0,3,0,0,0,0,3,3,3,3,3,0,0,0,0,0,0,0,0,3,4,4,3,0,3,3,9,3,3,3,3,3,3,3,4,4,4,9,4,3,3,3,1,1,4,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,1,4,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,1"/>
             </Component>
             <Component componentID="184" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
                 <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vblue_ball"/>
@@ -544,193 +688,6 @@
                     <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
                 </Component>
             </Component>
-            <Component componentID="110" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
-                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vmain"/>
-                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/main.png"/>
-            </Component>
-            <Component componentID="111" typeID="Corg.netbeans.modules.vmd.game.model.Sprite">
-                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VMainSprite"/>
-                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R110"/>
-                <Property name="layercd.prop.tile.width" typeID="Pint" value="V32"/>
-                <Property name="layercd.prop.tile.height" typeID="Pint" value="V32"/>
-                <Property name="sequencecontainer.prop.defaultsequence" typeID="Corg.netbeans.modules.vmd.game.model.Sequence" value="R112"/>
-                <Property name="sequencecontainer.prop.sequences" typeID="1Corg.netbeans.modules.vmd.game.model.Sequence" value="A4:4_R1124_R1134_R1144_R115"/>
-                <Component componentID="115" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R110"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VMainWalkUp"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,9,10,11,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-                <Component componentID="114" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R110"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VMainWalkRight"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,6,7,8,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-                <Component componentID="113" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R110"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VMainWalkLeft"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,3,4,5,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-                <Component componentID="112" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R110"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VMainWalkDown"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,0,1,2,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-            </Component>
-            <Component componentID="227" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
-                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VRobotFacilityB"/>
-                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R132"/>
-                <Property name="layercd.prop.tile.width" typeID="Pint" value="V48"/>
-                <Property name="layercd.prop.tile.height" typeID="Pint" value="V48"/>
-                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V20,20,4,9,4,9,4,4,4,9,4,4,4,4,4,4,4,4,4,9,4,4,4,0,4,0,0,0,4,0,0,0,0,0,0,0,0,4,0,0,0,4,4,0,4,0,4,0,4,0,4,0,4,4,0,0,0,4,0,4,0,4,4,0,4,9,4,0,4,4,0,0,9,8,4,0,0,0,0,4,0,4,4,0,0,0,0,0,0,0,0,4,0,4,0,0,0,4,4,4,0,4,4,0,4,4,4,0,0,4,0,4,0,4,0,4,0,4,0,4,0,4,4,0,0,4,0,4,0,4,0,0,0,4,0,4,0,4,0,4,0,4,4,9,4,9,0,4,0,4,4,9,4,0,0,4,0,4,0,4,0,4,4,0,0,0,0,4,0,4,0,0,9,0,0,4,10,4,0,4,0,4,4,0,4,4,0,9,0,4,4,0,4,0,9,4,0,4,0,4,0,4,4,0,4,0,0,4,0,0,4,0,0,0,0,0,0,4,0,10,0,4,4,0,4,0,4,9,10,10,0,4,4,9,4,4,0,4,0,10,0,4,4,0,4,0,3,0,0,0,0,0,0,0,0,4,0,4,0,10,0,4,4,0,4,0,0,3,0,0,4,0,0,0,0,4,0,4,0,10,0,4,4,0,4,0,4,8,4,4,9,0,0,4,9,4,0,4,0,9,0,4,4,0,4,0,0,4,9,0,0,0,0,0,0,0,0,4,0,0,0,4,4,0,4,0,0,0,0,0,0,0,0,4,4,4,4,4,9,4,4,4,4,0,9,4,4,4,4,4,4,9,4,4,4,0,0,0,0,0,7,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,8,8,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,8,8"/>
-            </Component>
-            <Component componentID="117" typeID="Corg.netbeans.modules.vmd.game.model.Sprite">
-                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VGuardGreen"/>
-                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R116"/>
-                <Property name="layercd.prop.tile.width" typeID="Pint" value="V32"/>
-                <Property name="layercd.prop.tile.height" typeID="Pint" value="V32"/>
-                <Property name="sequencecontainer.prop.defaultsequence" typeID="Corg.netbeans.modules.vmd.game.model.Sequence" value="R118"/>
-                <Property name="sequencecontainer.prop.sequences" typeID="1Corg.netbeans.modules.vmd.game.model.Sequence" value="A4:4_R1184_R1194_R1204_R121"/>
-                <Component componentID="119" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R116"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardGreenWalkLeft"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,3,4,5,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-                <Component componentID="118" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R116"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardGreenWalkDown"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,0,1,2,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-                <Component componentID="121" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R116"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardGreenWalkUp"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,9,10,11,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-                <Component componentID="120" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R116"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardGreenWalkRight"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,6,7,8,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-            </Component>
-            <Component componentID="116" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
-                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vguard_green"/>
-                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/guard_green.png"/>
-            </Component>
-            <Component componentID="123" typeID="Corg.netbeans.modules.vmd.game.model.Sprite">
-                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VGuardPunk"/>
-                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R122"/>
-                <Property name="layercd.prop.tile.width" typeID="Pint" value="V32"/>
-                <Property name="layercd.prop.tile.height" typeID="Pint" value="V32"/>
-                <Property name="sequencecontainer.prop.defaultsequence" typeID="Corg.netbeans.modules.vmd.game.model.Sequence" value="R124"/>
-                <Property name="sequencecontainer.prop.sequences" typeID="1Corg.netbeans.modules.vmd.game.model.Sequence" value="A4:4_R1244_R1254_R1264_R127"/>
-                <Component componentID="127" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R122"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardPunkWalkUp"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,9,10,11,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-                <Component componentID="126" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R122"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardPunkWalkRight"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,6,7,8,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-                <Component componentID="125" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R122"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardPunkWalkLeft"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,3,4,5,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-                <Component componentID="124" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R122"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VGuardPunkWalkDown"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,0,1,2,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-            </Component>
-            <Component componentID="122" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
-                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vguard_punk"/>
-                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/guard_punk.png"/>
-            </Component>
-            <Component componentID="228" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
-                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="VModern_21"/>
-                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/Modern 21.png"/>
-            </Component>
-            <Component componentID="231" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
-                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VRobotFacility1"/>
-                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R228"/>
-                <Property name="layercd.prop.tile.width" typeID="Pint" value="V16"/>
-                <Property name="layercd.prop.tile.height" typeID="Pint" value="V16"/>
-                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V40,40,157,244,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,159,187,191,133,223,224,225,226,136,190,192,313,314,315,316,317,133,136,190,192,133,134,134,134,134,134,134,134,134,134,134,134,134,136,48,133,134,134,136,188,189,187,189,163,253,254,255,256,166,190,192,343,344,345,346,347,163,166,190,192,163,164,164,164,164,164,164,164,164,164,164,164,164,166,48,163,164,164,166,187,189,187,189,193,283,284,285,286,196,190,192,373,374,375,376,377,193,196,190,192,193,194,194,194,194,194,194,194,194,194,194,194,194,196,48,193,194,194,196,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,160,161,161,161,188,192,0,0,0,0,0,0,160,191,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,135,48,133,38,38,136,0,0,0,0,0,0,133,134,136,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,165,48,163,164,164,166,137,138,0,0,197,198,163,164,166,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,195,48,193,194,194,196,167,168,0,0,227,228,193,194,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,137,138,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,160,162,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,190,191,161,161,161,161,161,161,161,161,161,161,162,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,135,107,221,221,221,221,221,221,221,221,221,191,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,165,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,195,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,190,14,14,15,0,0,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,133,134,136,0,0,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,163,164,166,0,0,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,193,194,196,0,0,220,162,0,0,0,0,0,0,0,0,190,13,161,161,161,161,161,161,162,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,190,192,133,134,134,134,134,136,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,190,192,163,164,164,164,164,166,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,190,192,193,194,194,194,194,196,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,190,161,161,161,162,0,0,48,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,133,134,134,134,136,0,0,135,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,163,164,164,164,166,0,0,165,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,193,194,194,194,196,0,0,195,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,160,41,41,41,41,161,161,161,161,161,161,161,161,161,161,161,191,192,0,0,160,161,161,161,192,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,0,0,133,134,134,134,136,0,0,0,135,0,0,0,0,187,189,187,189,0,0,0,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166,0,0,163,164,164,164,166,0,0,0,165,0,0,0,0,187,189,187,189,0,0,0,193,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,196,0,0,193,194,194,194,196,0,0,0,195,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,216,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,188,189,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166"/>
-            </Component>
-            <Component componentID="232" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
-                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VModel"/>
-                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R228"/>
-                <Property name="layercd.prop.tile.width" typeID="Pint" value="V16"/>
-                <Property name="layercd.prop.tile.height" typeID="Pint" value="V16"/>
-                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V40,40,157,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,159,187,191,133,223,224,225,226,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,188,189,187,189,163,253,254,255,256,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166,187,189,187,189,193,283,284,285,286,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,196,187,189,187,189,243,243,244,244,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,244,244,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,216,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,188,189,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166"/>
-            </Component>
-            <Component componentID="234" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
-                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VModel2"/>
-                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R228"/>
-                <Property name="layercd.prop.tile.width" typeID="Pint" value="V16"/>
-                <Property name="layercd.prop.tile.height" typeID="Pint" value="V16"/>
-                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V40,40,157,244,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,159,187,191,133,223,224,225,226,136,190,192,313,314,315,316,317,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,188,189,187,189,163,253,254,255,256,166,190,192,343,344,345,346,347,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166,187,189,187,189,193,283,284,285,286,196,190,192,373,374,375,376,377,193,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,196,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,160,161,161,161,188,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,133,38,38,38,38,136,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,163,68,164,164,164,166,137,138,0,197,198,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,193,194,194,194,194,196,167,168,0,227,228,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,216,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,188,189,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166"/>
-            </Component>
-            <Component componentID="235" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
-                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VChao"/>
-                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R228"/>
-                <Property name="layercd.prop.tile.width" typeID="Pint" value="V16"/>
-                <Property name="layercd.prop.tile.height" typeID="Pint" value="V16"/>
-                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V40,40,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243"/>
-            </Component>
-            <Component componentID="236" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
-                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vplasmabot"/>
-                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/plasmabot.png"/>
-            </Component>
             <Component componentID="237" typeID="Corg.netbeans.modules.vmd.game.model.Sprite">
                 <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VPlasma_bot"/>
                 <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R236"/>
@@ -738,20 +695,20 @@
                 <Property name="layercd.prop.tile.height" typeID="Pint" value="V32"/>
                 <Property name="sequencecontainer.prop.defaultsequence" typeID="Corg.netbeans.modules.vmd.game.model.Sequence" value="R238"/>
                 <Property name="sequencecontainer.prop.sequences" typeID="1Corg.netbeans.modules.vmd.game.model.Sequence" value="A4:4_R2384_R2394_R2404_R241"/>
-                <Component componentID="238" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R236"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VPlasmabot_WRight"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,9,10,11,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
                 <Component componentID="239" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
                     <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R236"/>
                     <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VPlasmabot_WDown"/>
                     <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
                     <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,0,1,2,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+                <Component componentID="238" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R236"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VPlasmabot_WRight"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,9,10,11,"/>
                     <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
                     <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
                     <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
@@ -775,6 +732,49 @@
                     <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
                 </Component>
             </Component>
+            <Component componentID="236" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
+                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vplasmabot"/>
+                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/plasmabot.png"/>
+            </Component>
+            <Component componentID="235" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VChao"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R228"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V16"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V16"/>
+                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V40,40,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243"/>
+            </Component>
+            <Component componentID="234" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VModel2"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R228"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V16"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V16"/>
+                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V40,40,157,244,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,159,187,191,133,223,224,225,226,136,190,192,313,314,315,316,317,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,188,189,187,189,163,253,254,255,256,166,190,192,343,344,345,346,347,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166,187,189,187,189,193,283,284,285,286,196,190,192,373,374,375,376,377,193,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,196,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,160,161,161,161,188,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,133,38,38,38,38,136,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,163,68,164,164,164,166,137,138,0,197,198,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,193,194,194,194,194,196,167,168,0,227,228,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,216,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,188,189,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166"/>
+            </Component>
+            <Component componentID="232" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VModel"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R228"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V16"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V16"/>
+                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V40,40,157,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,159,187,191,133,223,224,225,226,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,188,189,187,189,163,253,254,255,256,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166,187,189,187,189,193,283,284,285,286,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,196,187,189,187,189,243,243,244,244,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,244,244,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,189,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,243,187,189,187,216,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,188,189,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166"/>
+            </Component>
+            <Component componentID="231" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VRobotFacility1"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R228"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V16"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V16"/>
+                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V40,40,157,244,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,159,187,191,133,223,224,225,226,136,190,192,313,314,315,316,317,133,136,190,192,133,134,134,134,134,134,134,134,134,134,134,134,134,136,48,133,134,134,136,188,189,187,189,163,253,254,255,256,166,190,192,343,344,345,346,347,163,166,190,192,163,164,164,164,164,164,164,164,164,164,164,164,164,166,48,163,164,164,166,187,189,187,189,193,283,284,285,286,196,190,192,373,374,375,376,377,193,196,190,192,193,194,194,194,194,194,194,194,194,194,194,194,194,196,48,193,194,194,196,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,160,161,161,161,188,192,0,0,0,0,0,0,160,191,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,135,48,133,38,38,136,0,0,0,0,0,0,133,134,136,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,165,48,163,164,164,166,137,138,0,0,197,198,163,164,166,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,195,48,193,194,194,196,167,168,0,0,227,228,193,194,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,137,138,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,160,162,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,190,191,161,161,161,161,161,161,161,161,161,161,162,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,135,107,221,221,221,221,221,221,221,221,221,191,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,165,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,195,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,190,14,14,15,0,0,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,133,134,136,0,0,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,163,164,166,0,0,48,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,193,194,196,0,0,220,162,0,0,0,0,0,0,0,0,190,13,161,161,161,161,161,161,162,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,190,192,133,134,134,134,134,136,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,190,192,163,164,164,164,164,166,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,48,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,190,192,193,194,194,194,194,196,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,190,161,161,161,162,0,0,48,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,133,134,134,134,136,0,0,135,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,163,164,164,164,166,0,0,165,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,193,194,194,194,196,0,0,195,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,190,192,0,0,0,0,0,0,48,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,160,41,41,41,41,161,161,161,161,161,161,161,161,161,161,161,191,192,0,0,160,161,161,161,192,0,0,0,48,0,0,0,0,187,189,187,189,0,0,0,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,0,0,133,134,134,134,136,0,0,0,135,0,0,0,0,187,189,187,189,0,0,0,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166,0,0,163,164,164,164,166,0,0,0,165,0,0,0,0,187,189,187,189,0,0,0,193,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,196,0,0,193,194,194,194,196,0,0,0,195,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,216,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,188,189,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166"/>
+            </Component>
+            <Component componentID="228" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
+                <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="VModern_21"/>
+                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/Modern 21.png"/>
+            </Component>
+            <Component componentID="227" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VRobotFacilityB"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R132"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V48"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V48"/>
+                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V20,20,4,9,4,9,4,4,4,9,4,4,4,4,4,4,4,4,4,9,4,4,4,0,4,0,0,0,4,0,0,0,0,0,0,0,0,4,0,0,0,4,4,0,4,0,4,0,4,0,4,0,4,4,0,0,0,4,0,4,0,4,4,0,4,9,4,0,4,4,0,0,9,8,4,0,0,0,0,4,0,4,4,0,0,0,0,0,0,0,0,4,0,4,0,0,0,4,4,4,0,4,4,0,4,4,4,0,0,4,0,4,0,4,0,4,0,4,0,4,0,4,4,0,0,4,0,4,0,4,0,0,0,4,0,4,0,4,0,4,0,4,4,9,4,9,0,4,0,4,4,9,4,0,0,4,0,4,0,4,0,4,4,0,0,0,0,4,0,4,0,0,9,0,0,4,10,4,0,4,0,4,4,0,4,4,0,9,0,4,4,0,4,0,9,4,0,4,0,4,0,4,4,0,4,0,0,4,0,0,4,0,0,0,0,0,0,4,0,10,0,4,4,0,4,0,4,9,10,10,0,4,4,9,4,4,0,4,0,10,0,4,4,0,4,0,3,0,0,0,0,0,0,0,0,4,0,4,0,10,0,4,4,0,4,0,0,3,0,0,4,0,0,0,0,4,0,4,0,10,0,4,4,0,4,0,4,8,4,4,9,0,0,4,9,4,0,4,0,9,0,4,4,0,4,0,0,4,9,0,0,0,0,0,0,0,0,4,0,0,0,4,4,0,4,0,0,0,0,0,0,0,0,4,4,4,4,4,9,4,4,4,4,0,9,4,4,4,4,4,4,9,4,4,4,0,0,0,0,0,7,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,8,8,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,8,8"/>
+            </Component>
             <Component componentID="242" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
                 <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vspringbotsheet"/>
                 <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/sprites/springbotsheet.png"/>
@@ -786,24 +786,6 @@
                 <Property name="layercd.prop.tile.height" typeID="Pint" value="V32"/>
                 <Property name="sequencecontainer.prop.defaultsequence" typeID="Corg.netbeans.modules.vmd.game.model.Sequence" value="R244"/>
                 <Property name="sequencecontainer.prop.sequences" typeID="1Corg.netbeans.modules.vmd.game.model.Sequence" value="A4:4_R2444_R2454_R2464_R247"/>
-                <Component componentID="244" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R242"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VSpringbot_WDown"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,0,1,2,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
-                <Component componentID="245" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
-                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R242"/>
-                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VSpringbot_WLeft"/>
-                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
-                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,6,7,8,"/>
-                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
-                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
-                </Component>
                 <Component componentID="246" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
                     <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R242"/>
                     <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VSpringbot_WUp"/>
@@ -822,6 +804,38 @@
                     <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
                     <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
                 </Component>
+                <Component componentID="244" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R242"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VSpringbot_WDown"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,0,1,2,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+                <Component componentID="245" typeID="Corg.netbeans.modules.vmd.game.model.Sequence">
+                    <Property name="sequncecd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R242"/>
+                    <Property name="sequncecd.prop.name" typeID="Pjava.lang.String" value="VSpringbot_WLeft"/>
+                    <Property name="sequncecd.prop.framems" typeID="Pint" value="V160"/>
+                    <Property name="sequncecd.prop.frames" typeID="P#SequenceFrames" value="V3,6,7,8,"/>
+                    <Property name="sequncecd.prop.frame.width" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.frame.height" typeID="Pint" value="V32"/>
+                    <Property name="sequncecd.prop.zero.based.index" typeID="Pboolean" value="Vtrue"/>
+                </Component>
+            </Component>
+            <Component componentID="248" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VRobotFacility2"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R228"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V16"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V16"/>
+                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V40,40,157,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,159,187,191,133,223,224,225,226,136,190,192,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,188,189,187,189,163,253,254,255,256,166,190,192,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166,187,189,187,189,193,283,284,285,286,196,190,192,193,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,196,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,160,161,161,161,188,192,0,0,0,0,157,158,158,158,158,158,158,158,159,0,0,157,158,158,158,158,158,158,158,158,159,0,0,0,187,189,187,189,0,0,133,38,38,38,38,136,0,0,0,0,187,188,218,218,218,218,218,218,219,0,0,187,188,188,188,188,188,188,188,188,189,0,0,0,187,189,187,189,0,0,163,68,164,164,164,166,0,0,0,0,187,189,133,134,134,134,134,134,136,0,0,133,134,134,134,134,134,134,136,187,189,0,0,0,187,189,187,189,0,0,193,194,194,194,194,196,0,0,0,0,187,189,163,164,164,164,164,164,166,0,0,163,164,164,164,164,164,164,166,187,189,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,187,189,193,194,194,194,194,194,196,0,0,193,194,194,194,194,194,194,196,187,189,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,0,0,0,187,189,187,191,158,158,158,158,158,158,158,158,158,158,158,158,188,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,0,0,0,187,189,187,191,188,188,188,188,188,188,188,188,188,188,188,188,188,189,0,0,0,103,105,105,105,105,105,105,105,158,158,159,0,0,0,187,189,0,0,0,187,189,187,189,133,134,134,134,134,134,134,134,134,134,134,134,134,136,0,0,0,133,134,134,134,134,134,134,136,187,188,189,0,0,0,187,189,0,0,0,187,189,187,189,163,164,164,164,164,164,164,164,164,164,164,164,164,166,0,0,0,163,164,164,164,164,164,164,166,187,188,189,0,0,0,187,189,0,0,0,187,189,187,189,193,194,194,194,194,194,194,194,194,194,194,194,194,196,0,0,0,193,194,194,194,194,194,194,196,187,188,189,0,0,0,187,189,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,188,189,0,0,0,187,189,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,188,189,0,0,0,187,189,0,0,0,187,189,187,189,0,0,0,0,0,157,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,159,0,0,0,187,188,189,0,0,0,187,189,0,0,0,187,189,187,189,0,0,0,0,0,217,218,218,218,218,218,218,218,218,218,218,218,218,218,218,188,189,0,0,0,187,188,189,0,0,0,133,136,0,0,0,187,189,187,189,0,0,0,0,0,133,134,134,134,134,134,134,134,134,134,134,134,134,134,136,187,189,0,0,0,187,188,189,0,0,0,163,166,0,0,0,187,189,187,189,0,0,0,0,0,163,164,164,164,164,164,164,164,164,164,164,164,164,164,166,187,189,0,0,0,187,188,189,0,0,0,193,196,0,0,0,187,189,187,189,0,0,0,0,0,193,194,194,194,194,194,194,194,194,194,194,194,194,194,196,187,189,0,0,0,187,188,189,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,0,0,0,187,188,189,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,0,0,0,187,188,188,158,158,158,158,159,0,0,0,187,189,187,189,0,0,0,157,158,158,158,158,158,158,158,158,158,158,158,158,158,159,0,0,187,189,0,0,0,187,188,188,188,188,188,188,189,0,0,0,187,189,187,189,0,0,0,217,218,218,218,218,218,218,218,218,218,218,218,218,188,189,0,0,187,189,0,0,0,187,188,188,188,188,188,188,189,0,0,0,187,189,187,189,0,0,0,133,134,134,134,134,134,134,134,134,134,134,134,136,187,189,0,0,187,189,0,0,0,187,188,188,188,188,188,188,189,0,0,0,187,189,187,189,0,0,0,163,164,164,164,164,164,164,164,164,164,164,164,166,187,189,0,0,187,189,0,0,0,187,188,188,188,188,188,188,189,0,0,0,187,189,187,189,0,0,0,193,194,194,194,194,194,194,194,194,194,194,194,196,187,189,0,0,187,189,0,0,0,187,188,188,188,188,188,188,189,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,0,0,187,189,0,0,0,133,134,134,134,134,134,134,136,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,0,0,187,189,0,0,0,163,164,164,164,164,164,164,166,0,0,0,187,189,187,189,0,0,157,158,158,158,158,158,158,158,158,158,159,0,0,0,187,189,0,0,187,189,0,0,0,193,194,194,194,194,194,194,196,0,0,0,187,189,187,189,0,0,187,188,188,188,188,188,188,188,188,188,189,9,0,9,187,189,0,0,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,187,188,188,188,188,188,188,188,188,188,189,9,9,9,187,189,0,0,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,10,0,187,188,188,188,188,188,188,188,188,188,188,158,158,158,188,188,158,158,188,188,158,158,158,158,158,158,158,158,158,158,158,158,158,158,188,189,133,136,244,242,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,163,166,246,246,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166"/>
+            </Component>
+            <Component componentID="249" typeID="Corg.netbeans.modules.vmd.game.model.TiledLayer">
+                <Property name="layercd.prop.name" typeID="Pjava.lang.String" value="VRobot_Facility_3"/>
+                <Property name="layercd.prop.imageresource" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource" value="R228"/>
+                <Property name="layercd.prop.tile.width" typeID="Pint" value="V16"/>
+                <Property name="layercd.prop.tile.height" typeID="Pint" value="V16"/>
+                <Property name="tiledlayercd.prop.tiles" typeID="P#TiledLayerTiles" value="V40,40,157,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,159,187,191,133,223,224,225,226,136,190,192,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,188,189,187,189,163,253,254,255,256,166,190,192,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166,187,189,187,189,193,283,284,285,286,196,190,192,193,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,196,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,190,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,160,161,161,161,188,192,0,0,0,0,157,159,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,133,38,38,38,38,136,0,0,0,0,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,163,68,164,164,164,166,0,0,0,0,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,193,194,194,194,194,196,0,0,0,0,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,188,158,158,158,158,158,158,158,158,158,158,158,158,188,188,158,158,158,158,158,158,158,158,158,158,158,158,158,159,0,0,0,0,0,0,0,0,187,189,187,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,188,219,0,0,0,0,0,0,0,0,187,189,187,189,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,0,0,0,0,0,0,0,0,187,189,187,189,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166,0,0,0,0,0,0,0,0,187,189,187,189,193,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,194,196,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,128,128,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,128,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,189,128,128,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,189,187,216,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,188,189,133,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,134,136,163,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,164,166"/>
             </Component>
         </Component>
     </Document>

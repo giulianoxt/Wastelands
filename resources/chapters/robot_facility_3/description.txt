@@ -1,0 +1,22 @@
+start_pos = (5, 5)
+end_pos = (35, 16)
+
+sound = psyko1.mid
+
+#GuardYellow1 = (7, 11)
+#GuardYellow2 = (6, 19)
+
+#GuardPunk1 = (7, 22)
+#GuardPunk2 = (13, 31)
+#GuardPunk3 = (20, 29)
+
+#GuardYellow3 = (8, 27)
+#GuardYellow4 = (12, 35)
+#GuardYellow5 = (34,2)
+
+#GuardPunk4 = (21,5)
+#GuardPunk5 = (35,30)
+
+#GuardYellow6 = (30, 25)
+#GuardYellow7 = (20, 3)
+#GuardYellow8 = (22,22)
