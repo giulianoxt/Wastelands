@@ -1,5 +1,5 @@
 start_pos = (5, 5)
-end_pos = (35, 16)
+end_pos = (17, 36)
 
 sound = psyko1.mid
 

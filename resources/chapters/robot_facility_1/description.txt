@@ -1,5 +1,5 @@
 start_pos = (5, 5)
-end_pos = (4, 12)
+end_pos = (13, 3)
 
 sound = dark1.mid
 

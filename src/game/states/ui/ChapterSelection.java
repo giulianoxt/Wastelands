@@ -2,6 +2,7 @@ package game.states.ui;
 
 import util.Util;
 import game.GameMidlet;
+import game.base.ChapterDescriptor;
 import game.base.ChapterStore;
 import game.chapters.Chapter;
 import java.util.Vector;
@@ -24,7 +25,7 @@ public class ChapterSelection extends Form {
     Vector chapters = ChapterStore.getStoredChapters();
     
     for (int i = 0; i < chapters.size(); ++i) {
-      append(getChapterItem((Chapter)chapters.elementAt(i)));
+      append(getChapterItem((ChapterDescriptor)chapters.elementAt(i)));
     }
 
     addCommand(new Command("Back", Command.CANCEL, 2));
@@ -37,12 +38,12 @@ public class ChapterSelection extends Form {
     });
   }
 
-  private ImageItem getChapterItem(final Chapter chapter) {
-    String filepath = "/chapters/" + chapter.getId() + "/thumbnail.png";
+  private ImageItem getChapterItem(final ChapterDescriptor chapterD) {
+    String filepath = "/chapters/" + chapterD.id + "/thumbnail.png";
     Image image = Util.getImage(filepath);
 
     ImageItem item = new ImageItem(
-      chapter.getName(), image, Item.LAYOUT_CENTER, "", ImageItem.BUTTON
+      chapterD.name, image, Item.LAYOUT_CENTER, "", ImageItem.BUTTON
     );
 
     item.addCommand(new Command("Play", Command.OK, 1));
@@ -50,7 +51,7 @@ public class ChapterSelection extends Form {
     item.setItemCommandListener(new ItemCommandListener() {
       public void commandAction(Command c, Item item) {
         if (c.getCommandType() == Command.OK)
-          GameMidlet.getInstance().gotoState(chapter);
+          GameMidlet.getInstance().gotoState(chapterD.getChapter());
       }
     });
 
