@@ -1,16 +1,18 @@
-start_pos = (1, 6)
-end_pos = (21, 19)
+start_pos = (5, 5)
+end_pos = (4, 12)
 
 sound = dark1.mid
 
-#GuardYellow1 = (9, 3)
-#GuardYellow2 = (17, 2)
+#GuardYellow1 = (23, 8)
+#GuardYellow2 = (18, 16)
 
-#GuardPunk1 = (2, 15)
-#GuardPunk2 = (6, 19)
-#GuardPunk3 = (17, 19)
+#GuardPunk1 = (13, 8)
+#GuardPunk2 = (18, 19)
+#GuardPunk3 = (27, 26)
 
-#GuardYellow3 = (3, 9)
-#GuardYellow4 = (6, 16)
+#GuardYellow3 = (6, 13)
+#GuardYellow4 = (14, 27)
+#GuardYellow5 = (9,26)
 
-#GuardPunk4 = (9,9)
+#GuardPunk4 = (29,35)
+#GuardPunk5 = (8,35)
