@@ -150,6 +150,26 @@ public class GameDesign {
     private TiledLayer Model;
     private TiledLayer Model2;
     private TiledLayer Chao;
+    private Image plasmabot;
+    private Sprite Plasma_bot;
+    public int Plasmabot_WRightDelay = 160;
+    public int[] Plasmabot_WRight = {9, 10, 11};
+    public int Plasmabot_WDownDelay = 160;
+    public int[] Plasmabot_WDown = {0, 1, 2};
+    public int Plasmabot_WUpDelay = 160;
+    public int[] Plasmabot_WUp = {3, 4, 5};
+    public int Plasmabot_WLeftDelay = 160;
+    public int[] Plasmabot_WLeft = {6, 7, 8};
+    private Image springbotsheet;
+    private Sprite Springbot;
+    public int Springbot_WDownDelay = 160;
+    public int[] Springbot_WDown = {0, 1, 2};
+    public int Springbot_WLeftDelay = 160;
+    public int[] Springbot_WLeft = {6, 7, 8};
+    public int Springbot_WUpDelay = 160;
+    public int[] Springbot_WUp = {3, 4, 5};
+    public int Springbot_WRightDelay = 160;
+    public int[] Springbot_WRight = {9, 10, 11};
     //</editor-fold>//GEN-END:|fields|0|
 
     //<editor-fold defaultstate="collapsed" desc=" Generated Methods ">//GEN-BEGIN:|methods|0|
@@ -913,6 +933,48 @@ public class GameDesign {
         return Chao;//GEN-BEGIN:|235-getter|3|
     }
 //GEN-END:|235-getter|3|
+
+    public Image getPlasmabot() throws java.io.IOException {//GEN-BEGIN:|236-getter|0|236-preInit
+        if (plasmabot == null) {//GEN-END:|236-getter|0|236-preInit
+            // write pre-init user code here
+            plasmabot = Image.createImage("/sprites/plasmabot.png");//GEN-BEGIN:|236-getter|1|236-postInit
+        }//GEN-END:|236-getter|1|236-postInit
+        // write post-init user code here
+        return this.plasmabot;//GEN-BEGIN:|236-getter|2|
+    }
+//GEN-END:|236-getter|2|
+
+    public Sprite getPlasma_bot() throws java.io.IOException {//GEN-BEGIN:|237-getter|0|237-preInit
+        if (Plasma_bot == null) {//GEN-END:|237-getter|0|237-preInit
+            // write pre-init user code here
+            Plasma_bot = new Sprite(getPlasmabot(), 32, 32);//GEN-BEGIN:|237-getter|1|237-postInit
+            Plasma_bot.setFrameSequence(Plasmabot_WRight);//GEN-END:|237-getter|1|237-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|237-getter|2|
+        return Plasma_bot;
+    }
+//GEN-END:|237-getter|2|
+
+    public Image getSpringbotsheet() throws java.io.IOException {//GEN-BEGIN:|242-getter|0|242-preInit
+        if (springbotsheet == null) {//GEN-END:|242-getter|0|242-preInit
+            // write pre-init user code here
+            springbotsheet = Image.createImage("/sprites/springbotsheet.png");//GEN-BEGIN:|242-getter|1|242-postInit
+        }//GEN-END:|242-getter|1|242-postInit
+        // write post-init user code here
+        return this.springbotsheet;//GEN-BEGIN:|242-getter|2|
+    }
+//GEN-END:|242-getter|2|
+
+    public Sprite getSpringbot() throws java.io.IOException {//GEN-BEGIN:|243-getter|0|243-preInit
+        if (Springbot == null) {//GEN-END:|243-getter|0|243-preInit
+            // write pre-init user code here
+            Springbot = new Sprite(getSpringbotsheet(), 32, 32);//GEN-BEGIN:|243-getter|1|243-postInit
+            Springbot.setFrameSequence(Springbot_WDown);//GEN-END:|243-getter|1|243-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|243-getter|2|
+        return Springbot;
+    }
+//GEN-END:|243-getter|2|
 
 
 
