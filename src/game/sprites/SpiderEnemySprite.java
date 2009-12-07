@@ -15,10 +15,10 @@ public class SpiderEnemySprite extends EnemySprite {
 
     GameDesign design = GameMidlet.getDesignInstance();
 
-    upSeq = design.RobotGrayWalkUp;
-    downSeq = design.RobotGrayWalkDown;
-    leftSeq = design.RobotGrayWalkLeft;
-    rightSeq = design.RobotGrayWalkRight;
+    upSeq = design.Plasmabot_WUp;
+    downSeq = design.Plasmabot_WDown;
+    leftSeq = design.Plasmabot_WLeft;
+    rightSeq = design.Plasmabot_WRight;
 
     current = null;
     setAnimation(downSeq);

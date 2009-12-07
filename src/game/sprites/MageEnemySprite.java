@@ -15,10 +15,10 @@ public class MageEnemySprite extends EnemySprite {
 
     GameDesign design = GameMidlet.getDesignInstance();
 
-    upSeq = design.RobotLightWalkUp;
-    downSeq = design.RobotLightWalkDown;
-    leftSeq = design.RobotLightWalkLeft;
-    rightSeq = design.RobotLightWalkRight;
+    upSeq = design.Springbot_WUp;
+    downSeq = design.Springbot_WDown;
+    leftSeq = design.Springbot_WLeft;
+    rightSeq = design.Springbot_WRight;
 
     current = null;
     setAnimation(downSeq);

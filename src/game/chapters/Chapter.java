@@ -136,10 +136,10 @@ public abstract class Chapter extends State {
 
       try {
         if (key.startsWith("GuardPunk")) {
-          enemy = new SpiderEnemySprite(design.getRobotGray());
+          enemy = new SpiderEnemySprite(design.getPlasma_bot());
           enemy.setHP(100);
         } else if (key.startsWith("GuardYellow")) {
-          enemy = new MageEnemySprite(design.getRobotLight());
+          enemy = new MageEnemySprite(design.getSpringbot());
           enemy.setHP(50);
         } else {
           continue;
